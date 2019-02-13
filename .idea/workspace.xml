@@ -2,20 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26e90684-1cac-49c4-ab88-7a5368fc2448" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/Internal/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/Internal/accounts/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/Internal/applications/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/Internal/cases/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/Internal/leases/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/Internal/properties/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/Internal/prospects/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/setup/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/setup/states/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/login/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/login/login_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/seleniumdriver.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/selenium_driver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/webdriver.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/webdriver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/states/StatesList.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/setup/states/StatesList.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/states/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Community/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Community/Home/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/community/Home/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Community/Home/make_payment/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/community/Home/make_payment/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Community/Home/my_account/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/community/Home/my_account/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Community/Home/my_balance/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/community/Home/my_balance/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Community/Home/my_cases/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/community/Home/my_cases/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Community/Home/my_leases/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/community/Home/my_leases/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Community/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/community/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Community/my_applications/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/community/my_applications/__init__.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,19 +22,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/base/selenium_driver.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/login/login_page.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="345">
+              <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
               <folding>
-                <element signature="e#0#43#0" expanded="true" />
+                <element signature="e#1#54#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/base/webdriver.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
@@ -79,6 +76,8 @@
         <option value="$PROJECT_DIR$/base/webdriver.py" />
         <option value="$PROJECT_DIR$/base/base_page.py" />
         <option value="$PROJECT_DIR$/base/base.py" />
+        <option value="$PROJECT_DIR$/base/selenium_driver.py" />
+        <option value="$PROJECT_DIR$/pages/login/login_page.py" />
       </list>
     </option>
   </component>
@@ -116,19 +115,7 @@
               <item name="salesforce" type="b2602c69:ProjectViewProjectNode" />
               <item name="salesforce" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Community" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salesforce" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salesforce" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Internal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salesforce" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salesforce" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="setup" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -301,6 +288,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="970" y="0" width="950" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26264802" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -452,23 +440,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/base/base.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/base/selenium_driver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="285">
+          <caret line="156" column="7" lean-forward="true" selection-start-line="156" selection-start-column="7" selection-end-line="156" selection-end-column="7" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/base.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/base/webdriver.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/login/login_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+          <folding>
+            <element signature="e#1#54#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
