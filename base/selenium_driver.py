@@ -109,7 +109,7 @@ class SeleniumDriver():
                               " locatorType: " + locatorType)
                 return True
             else:
-                print("Element not present with locator: " + locator +
+                print("Element not spresent with locator: " + locator +
                               " locatorType: " + locatorType)
                 return False
         except:

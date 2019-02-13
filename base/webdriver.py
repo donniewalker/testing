@@ -4,7 +4,7 @@ class WebDriverInstance():
 
     def getWebDriverInstance(self):
         driver = self.driver
-        baseURL = "https://letskodeit.teachable.com/"
+        baseURL = "https://test.salesforce.com"
         # Instantiate webdriver
         driver = webdriver.Chrome()
         # Setting Driver Implicit Time out for An Element
