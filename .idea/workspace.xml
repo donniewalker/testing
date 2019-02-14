@@ -2,17 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26e90684-1cac-49c4-ab88-7a5368fc2448" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/login/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/login/login_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/internal_user/applications/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/internal_user/cases/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/internal_user/leases/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/internal_user/navigation/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/internal_user/navigation/navigation_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/internal_user/properties/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/internal_user/prospects/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/Community/Home/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/community/Home/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/Community/Home/make_payment/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/community/Home/make_payment/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/Community/Home/my_account/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/community/Home/my_account/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/Community/Home/my_balance/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/community/Home/my_balance/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/Community/Home/my_cases/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/community/Home/my_cases/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/Community/Home/my_leases/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/community/Home/my_leases/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/Community/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/community/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/Community/my_applications/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/community/my_applications/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Internal/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/community/home/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Internal/accounts/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/community/home/make_payment/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Internal/applications/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/community/home/my_account/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Internal/cases/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/community/home/my_balance/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Internal/leases/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/community/home/my_cases/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Internal/properties/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/community/home/my_leases/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Internal/prospects/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/community/make_payment/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/community/Home/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/community/my_account/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/community/Home/make_payment/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/community/my_balance/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/community/Home/my_account/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/community/my_cases/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/community/Home/my_balance/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/community/my_leases/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/community/Home/my_cases/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/internal_setup/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/community/Home/my_leases/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/internal_setup/states/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login/login_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login/login_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/setup/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/internal_user/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/setup/states/StatesList.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/internal_setup/states/StatesList.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/setup/states/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/internal_user/accounts/__init__.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,14 +36,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/internal_setup/states/StatesList.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1620">
+              <caret line="108" column="20" selection-start-line="108" selection-start-column="20" selection-end-line="108" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/login/login_page.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+            <state relative-caret-position="360">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
               <folding>
-                <element signature="e#1#54#0" expanded="true" />
+                <element signature="e#0#57#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/base/selenium_driver.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1980">
+              <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/internal_user/navigation/navigation_page.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -37,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/base/webdriver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            <state relative-caret-position="120">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -77,14 +124,17 @@
         <option value="$PROJECT_DIR$/base/base_page.py" />
         <option value="$PROJECT_DIR$/base/base.py" />
         <option value="$PROJECT_DIR$/base/selenium_driver.py" />
+        <option value="$PROJECT_DIR$/pages/Internal/navigation/navigation_page.py" />
+        <option value="$PROJECT_DIR$/pages/internal_user/navigation/navigation_page.py" />
+        <option value="$PROJECT_DIR$/pages/internal_setup/states/StatesList.py" />
         <option value="$PROJECT_DIR$/pages/login/login_page.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="970" />
-    <option name="width" value="950" />
-    <option name="height" value="1080" />
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -94,6 +144,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -104,12 +155,33 @@
             <path>
               <item name="salesforce" type="b2602c69:ProjectViewProjectNode" />
               <item name="salesforce" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="salesforce" type="b2602c69:ProjectViewProjectNode" />
               <item name="salesforce" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="internal_setup" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="salesforce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="salesforce" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="internal_setup" type="462c0819:PsiDirectoryNode" />
+              <item name="states" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="salesforce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="salesforce" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="internal_user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="salesforce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="salesforce" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="internal_user" type="462c0819:PsiDirectoryNode" />
+              <item name="navigation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="salesforce" type="b2602c69:ProjectViewProjectNode" />
@@ -121,7 +193,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -154,7 +225,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for pages.setup.states.StatesList.StatesList">
+  <component name="RunManager" selected="Python tests.Unittests for pages.internal_setup.states.StatesList.StatesList">
     <configuration name="StatesList" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="salesforce" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -197,46 +268,46 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for pages.setup.states.StatesList" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for pages.internal_setup.states.StatesList" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="salesforce" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pages/setup/states" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pages/internal_setup/states" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;pages.setup.states.StatesList&quot;" />
+      <option name="_new_target" value="&quot;pages.internal_setup.states.StatesList&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for pages.setup.states.StatesList.StatesList" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for pages.internal_setup.states.StatesList.StatesList" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="salesforce" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pages/setup/states" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pages/internal_setup/states" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_pattern" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;pages.setup.states.StatesList.StatesList&quot;" />
+      <option name="_new_target" value="&quot;pages.internal_setup.states.StatesList.StatesList&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Python.StatesTest" />
       <item itemvalue="Python.StatesList" />
-      <item itemvalue="Python tests.Unittests for pages.setup.states.StatesList" />
-      <item itemvalue="Python tests.Unittests for pages.setup.states.StatesList.StatesList" />
+      <item itemvalue="Python tests.Unittests for pages.internal_setup.states.StatesList" />
+      <item itemvalue="Python tests.Unittests for pages.internal_setup.states.StatesList.StatesList" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests for pages.setup.states.StatesList.StatesList" />
+        <item itemvalue="Python tests.Unittests for pages.internal_setup.states.StatesList.StatesList" />
         <item itemvalue="Python.StatesList" />
-        <item itemvalue="Python tests.Unittests for pages.setup.states.StatesList" />
+        <item itemvalue="Python tests.Unittests for pages.internal_setup.states.StatesList" />
         <item itemvalue="Python.StatesTest" />
       </list>
     </recent_temporary>
@@ -287,10 +358,10 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="970" y="0" width="950" height="1080" extended-state="0" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26264802" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2622433" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -301,7 +372,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.31408307" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.31408307" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32908705" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -326,7 +397,7 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/setup/states/__init__.py">
+    <entry file="file://$PROJECT_DIR$/pages/internal_setup/states/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/_jb_pytest_runner.py">
@@ -430,42 +501,47 @@
     <entry file="file://$PROJECT_DIR$/states/WebDriver.py" />
     <entry file="file://$PROJECT_DIR$/states/Login.py" />
     <entry file="file://$PROJECT_DIR$/states/Utilities.py" />
-    <entry file="file://$PROJECT_DIR$/pages/setup/states/StatesList.py">
+    <entry file="file://$PROJECT_DIR$/base/base.py" />
+    <entry file="file://$PROJECT_DIR$/base/webdriver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        <state relative-caret-position="120">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/internal_setup/states/StatesList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1620">
+          <caret line="108" column="20" selection-start-line="108" selection-start-column="20" selection-end-line="108" selection-end-column="20" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/base.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/pages/internal_user/navigation/navigation_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/base/selenium_driver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="156" column="7" lean-forward="true" selection-start-line="156" selection-start-column="7" selection-end-line="156" selection-end-column="7" />
+        <state relative-caret-position="1980">
+          <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/webdriver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/login/login_page.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+        <state relative-caret-position="360">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
           <folding>
-            <element signature="e#1#54#0" expanded="true" />
+            <element signature="e#0#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
