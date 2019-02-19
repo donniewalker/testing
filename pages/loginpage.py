@@ -13,7 +13,7 @@ logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', datefmt='
 
 class LoginPage(SeleniumDriver):
     def __init__(self, driver):
-        super().__init__(self.driver)
+        super(LoginPage, self).__init__(self.driver)
         self.driver = driver
 
     # Locators

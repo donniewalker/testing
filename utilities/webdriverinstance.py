@@ -5,9 +5,6 @@
 """
 
 import logging
-import unittest
-import sys
-
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
@@ -15,12 +12,12 @@ logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', datefmt='
                     level=logging.INFO)
 
 
-class WebdriverInstance(unittest.TestCase):
+class WebdriverInstance():
     """
     Instantiate the webdriver instance.
     """
 
-    def setUp(self):
+    def getWebDriverInstance(self):
         """
         This method is to instantiate the webdriver instance.
         """
@@ -36,23 +33,3 @@ class WebdriverInstance(unittest.TestCase):
         self.driver.get(base_url)
         window_before = self.driver.window_handles[0]
         logging.info(window_before)
-
-    def tearDown(self):
-        """
-        Teardown method.
-        Capture screenshots of failed test cases
-        & to quit web driver instance.
-        """
-        logging.info("### TEARDOWN METHOD ###")
-
-        if sys.exc_info()[0]:
-            logging.info("# Say Cheese! #")
-            test_method_name = self._testMethodName
-            self.driver.save_screenshot("./../screenshots/%s.png" % test_method_name)
-
-        if self.driver is not None:
-            logging.info("# I quit... #")
-            self.driver.quit()
-
-if __name__ == "__main__":
-    unittest.main()
