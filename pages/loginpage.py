@@ -1,6 +1,20 @@
-from base.seleniumdriver import SeleniumDriver
+"""
+@author: Donnie Walker
+@email: donalddeanwalker@gmail.com
+@date: 18-Feb-19
+"""
+import logging
+
+from utilities.seleniumdriver import SeleniumDriver
+
+logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',
+                    level=logging.INFO)
+
 
 class LoginPage(SeleniumDriver):
+    def __init__(self, driver):
+        super().__init__(self.driver)
+        self.driver = driver
 
     # Locators
     _username_field = "username"
