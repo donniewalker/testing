@@ -1,12 +1,24 @@
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import *
 
-class SeleniumDriver():
 
-    def __init__(self, driver):
-        self.driver = driver
+class SeleniumDriver:
+
+    def getWebDriverInstance(self):
+        chrome_options = Options()
+        chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
+        chrome_driver = "/Users/donniewalker/PycharmProjects/lib/chromedriver"
+        driver = webdriver.Chrome(chrome_driver, options=chrome_options)
+        base_url = "https://test.salesforce.com"
+        driver.implicitly_wait(3)
+        driver.get(base_url)
+        window_before = driver.window_handles[0]
+        print(window_before)
+        return driver
 
     def getTitle(self):
         return self.driver.title
@@ -26,8 +38,7 @@ class SeleniumDriver():
         elif locatorType == "link":
             return By.LINK_TEXT
         else:
-            print("Locator type " + locatorType +
-                          " not correct/supported")
+            print("Locator type " + locatorType + " not correct/supported")
         return False
 
     def getElement(self, locator, locatorType="id"):
@@ -35,7 +46,7 @@ class SeleniumDriver():
         try:
             locatorType = locatorType.lower()
             byType = self.getByType(locatorType)
-            element = self.driver.find_element(byType, locator)
+            element = self.driver.find_elements(byType, locator)
             print("Element found with locator: " + locator +
                           " and  locatorType: " + locatorType)
         except:
@@ -172,3 +183,12 @@ class SeleniumDriver():
         if direction == "down":
             # Scroll Down
             self.driver.execute_script("window.scrollBy(0, 1000);")
+
+    def verifyPageTitle(self, titleToVerify):
+        try:
+            actualTitle = self.getTitle()
+            return self.util.verifyTextContains(actualTitle, titleToVerify)
+        except:
+            self.log.error("Failed to get page title")
+            print_stack()
+            return False
