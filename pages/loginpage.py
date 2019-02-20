@@ -5,39 +5,25 @@
 """
 import logging
 
-from utilities.seleniumdriver import SeleniumDriver
-
 logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',
                     level=logging.INFO)
 
 
-class LoginPage(SeleniumDriver):
-    def __init__(self, driver):
-        super(LoginPage, self).__init__(self.driver)
-        self.driver = driver
+class LoginPage():
+     def enterUsername(self):
+        driver.find_element_by_id("username").click()
+        driver.find_element_by_id("username").clear()
+        driver.find_element_by_id("username").send_keys("test-ug6swfcwdsa5@example.com")
 
-    # Locators
-    _username_field = "username"
-    _password_field = "password"
-    _login_button = "Login"
-
-    def clearFields(self):
-        usernameField = self.getElement(locator=self._username_field)
-        usernameField.clear()
-        passwordField = self.getElement(locator=self._password_field)
-        passwordField.clear()
-
-    def enterUsername(self, username):
-        self.sendKeys(username, self._username_field)
-
-    def enterPassword(self, password):
-        self.sendKeys(password, self._password_field)
+    def enterPassword(self):
+        driver.find_element_by_id("password").click()
+        driver.find_element_by_id("password").clear()
+        driver.find_element_by_id("password").send_keys("28)Gg#kH|G")
 
     def clickLoginButton(self):
-        self.elementClick(self._login_button, locatorType="id")
+        driver.find_element_by_id("Login").click()
 
     def login(self, username="", password=""):
-        self.clearFields()
         self.enterUsername(username)
         self.enterPassword(password)
         self.clickLoginButton()

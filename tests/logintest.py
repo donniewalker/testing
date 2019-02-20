@@ -26,7 +26,7 @@ class LoginTests(unittest.TestCase):
         This method is to instantiate the webdriver instance.
         """
         logging.info("## SETUP METHOD ##")
-        logging.info("# Initializing WebDriverInstance.")
+        logging.info("# Initializing WebDriverInstance. #")
         chrome_options = Options()
         chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
         chrome_driver = "/Users/donniewalker/PycharmProjects/lib/chromedriver"
@@ -58,7 +58,7 @@ class LoginTests(unittest.TestCase):
             self.driver.save_screenshot("./../screenshots/%s.png" % test_method_name)
 
         if self.driver is not None:
-            logging.info("# I quit... #")
+            logging.info("# I quit! #")
             self.driver.quit()
 
 if __name__ == "__main__":

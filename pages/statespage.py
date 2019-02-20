@@ -9,7 +9,8 @@ class StatesList(unittest.TestCase):
     def setUp(self):
         chrome_options = Options()
         chrome_options.add_experimental_option("debuggerAddress","127.0.0.1:9222")
-        self.driver = webdriver.Chrome(chrome_options=chrome_options)
+        chrome_driver = "/Users/donniewalker/PycharmProjects/lib/chromedriver"
+        self.driver = webdriver.Chrome(chrome_driver, options=chrome_options)
         self.base_url = "https://test.salesforce.com"
 
     def test_state_field_populates(self):
@@ -21,7 +22,6 @@ class StatesList(unittest.TestCase):
 
         driver.find_element_by_id("username").click()
         driver.find_element_by_id("username").clear()
-        driver.find_element_by_id("username").click()
         driver.find_element_by_id("username").send_keys("test-ug6swfcwdsa5@example.com")
         driver.find_element_by_id("password").click()
         driver.find_element_by_id("password").clear()
@@ -53,7 +53,7 @@ class StatesList(unittest.TestCase):
         element5.click()
 
         country = range(0,238)
-        count = 32
+        count = 9
         for i in country:
             driver = self.driver
             time.sleep(3)
@@ -73,10 +73,10 @@ class StatesList(unittest.TestCase):
             driver.find_element_by_id("configurenew:j_id1:blockNew:j_id9:nameSectionItem:editName").click()
             driver.find_element_by_id("configurenew:j_id1:blockNew:j_id9:nameSectionItem:editName").clear()
             driver.find_element_by_id("configurenew:j_id1:blockNew:j_id9:nameSectionItem:editName").send_keys(
-                "cc")
+                "Not Applicable")
             driver.find_element_by_id("configurenew:j_id1:blockNew:j_id9:codeSectionItem:editIsoCode").click()
             driver.find_element_by_id("configurenew:j_id1:blockNew:j_id9:codeSectionItem:editIsoCode").clear()
-            driver.find_element_by_id("configurenew:j_id1:blockNew:j_id9:codeSectionItem:editIsoCode").send_keys("cc")
+            driver.find_element_by_id("configurenew:j_id1:blockNew:j_id9:codeSectionItem:editIsoCode").send_keys("NA")
             driver.find_element_by_id("configurenew:j_id1:blockNew:j_id9:activeSectionItem:editActive").click()
             time.sleep(3)
             driver.find_element_by_id("configurenew:j_id1:blockNew:j_id9:visibleSectionItem:editVisible").click()
@@ -90,7 +90,7 @@ class StatesList(unittest.TestCase):
             element7.click()
 
             time.sleep(5)
-            if i <= country:
+            if i <= 238:
                 count += 1
         return count
 
