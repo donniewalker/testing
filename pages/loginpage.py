@@ -5,13 +5,17 @@
 """
 import logging
 
+from utilities.webdriver import WebDriverInstance
+
 logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',
                     level=logging.INFO)
 
 
-class LoginPage:
+class LoginPage(WebDriverInstance):
     def __init__(self, driver):
-        self.driver = driver
+        super().__init__(driver)
+        wdi = WebDriverInstance(driver)
+        self.driver = wdi.getWebDriverInstance()
 
     def enterUsername(self):
         self.driver.find_element_by_id("username").click()

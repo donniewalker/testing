@@ -1,4 +1,4 @@
-How to retain the same session ID of a previous webdriver instance to get around multi-factor authentication
+How to retain session ID of a previous webdriver instance.  This is needed to get around multi-factor authentication.
 
 Before executing tests run following command in terminal (mac):
 
