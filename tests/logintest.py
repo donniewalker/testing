@@ -1,13 +1,13 @@
 """
 @author: Donnie Walker
 @email: donalddeanwalker@gmail.com
-@date: 18-Feb-19
+@date: 18-Feb-27
 """
 
-import unittest
 import logging
+import unittest
 
-from utilities.webdriver import WebDriverInstance
+from utilities.webdriver import WebDriver
 from pages.loginpage import LoginPage
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',
@@ -15,22 +15,25 @@ logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', datefmt='
 
 
 class LoginTest(unittest.TestCase):
-    def __init__(self, driver):
-        super().__init__(driver)
-        self.driver = driver
+
+    def setUp(self):
+        self.webdriver_instance = WebDriver()
+        self.webdriver_instance.getWebDriverInstance()
+        self.driver = self.webdriver_instance.driver
 
     def test_oneValidLogin(self):
-        wdi = WebDriverInstance(self.driver)
-        wdi.getWebDriverInstance()
-        self.lp = LoginPage(self.driver)
-        self.lp.login()
-        # result = self.lp.verifyLogin Successful()
-        # assert result == True
+        logging.info("## BEGIN VALID LOGIN TEST ##")
+        login_page = LoginPage(self.driver)
+        login_page.login("test-jcwwd1expiuf@example.com", "m#$M*ZGxv9")
+        result = login_page.loginSuccessful()
+        assert result == True
+        print("Valid Login Test Passed")
 
     def tearDown(self):
-        logging.info("### TEARDOWN METHOD ###")
-        logging.info("# Quitting #")
-        self.lp.driver.quit()
+        logging.info("## TEARDOWN TEST ##")
+        if self.driver is not None:
+            logging.info("# Removing Webdriver #")
+            self.driver.quit()
 
 
 if __name__ == "__main__":
