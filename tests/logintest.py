@@ -16,24 +16,35 @@ logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', datefmt='
 
 class LoginTest(unittest.TestCase):
 
-    def setUp(self):
-        self.webdriver_instance = WebDriver()
-        self.webdriver_instance.getWebDriverInstance()
-        self.driver = self.webdriver_instance.driver
+    @classmethod
+    def setUpClass(cls):
+        cls.webdriver_instance = WebDriver()
+        cls.webdriver_instance.getWebDriverInstance()
+        cls.driver = cls.webdriver_instance.driver
 
-    def test_oneValidLogin(self):
-        logging.info("## BEGIN VALID LOGIN TEST ##")
-        login_page = LoginPage(self.driver)
-        login_page.login("test-jcwwd1expiuf@example.com", "m#$M*ZGxv9")
-        result = login_page.loginSuccessful()
-        assert result == True
+    def test_oneLoginValid(self):
+        logging.info("##### BEGIN VALID LOGIN TEST #####")
+        log_in = LoginPage(self.driver)
+        log_in.login_page("test-jcwwd1expiuf@example.com", "m#$M*ZGxv9")
+        result = log_in.is_valid()
+        self.assertTrue(result)
         print("Valid Login Test Passed")
 
-    def tearDown(self):
-        logging.info("## TEARDOWN TEST ##")
-        if self.driver is not None:
+    def test_twoLoginInvalid(self):
+        logging.info("##### BEGIN INVALID LOGIN TEST #####")
+        log_in = LoginPage(self.driver)
+        log_in.invalid_login_page("test-invalid@example.com", "login")
+        result = log_in.is_invalid()
+        self.assertEqual(result, "Please check your username and password. "
+                         "If you still can't log in, contact your Salesforce administrator.")
+        print("Invalid Login Test Passed")
+
+    @classmethod
+    def tearDownClass(cls):
+        logging.info("##### TEARDOWN TEST #####")
+        if cls.driver is not None:
             logging.info("# Removing Webdriver #")
-            self.driver.quit()
+            cls.driver.quit()
 
 
 if __name__ == "__main__":
