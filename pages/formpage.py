@@ -4,10 +4,8 @@
 @date: 18-Feb-27
 """
 
-import time
-
-from base.seleniumdriver import SeleniumDriver
-from pages.navigationpage import NavigationPage
+from tests.base import SeleniumDriver
+from tests.pages.navigationpage import NavigationPage
 
 
 class FormPage(SeleniumDriver):

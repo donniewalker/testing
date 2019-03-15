@@ -6,7 +6,7 @@
 
 import time
 
-from base.seleniumdriver import SeleniumDriver
+from tests.base import SeleniumDriver
 
 
 class LoginPage(SeleniumDriver):
