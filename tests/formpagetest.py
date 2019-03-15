@@ -6,7 +6,6 @@
 
 import logging
 import unittest
-import time
 
 from base.webdriver import WebDriver
 from pages.loginpage import LoginPage
@@ -23,20 +22,14 @@ class LoginTest(unittest.TestCase):
         cls.webdriver_instance = WebDriver()
         cls.webdriver_instance.getWebDriverInstance()
         cls.driver = cls.webdriver_instance.driver
-        # log_in = LoginPage(cls.driver)
-        # log_in.login_page("test-ctbawsg8setw@example.com", "y$9lB0|YDD")
+        log_in = LoginPage(cls.driver)
+        log_in.login_page("test-ctbawsg8setw@example.com", "y$9lB0|YDD")
 
-    def test_submit_guestcard(self):
+    def test_submit_form(self):
         logging.info("##### BEGIN SUBMIT FULL FORM #####")
-        self.driver.get("https://sandbox-efficiency-page-8761-1694a6059cf.cs69.force.com/s/"
-                        "guest-card?moc=On_Site&propertyId=a1B2D0000003JtUUAU&pNum=679")
-        time.sleep(3)
         submit_full_form = FormPage(self.driver)
         submit_full_form.submit_form_all("Henry", "Hen", "Madison", "1234 Yorktown St", "New Hampshire", "67567",
                                          "3546789876", "henry@madison.com")
-        # result = log_in.is_valid()
-        # self.assertTrue(result)
-        # print("Valid Login Test Passed")
 
     @classmethod
     def tearDownClass(cls):

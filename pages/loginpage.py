@@ -1,22 +1,12 @@
 """
 @author: Donnie Walker
 @email: donalddeanwalker@gmail.com
-@date: 18-Feb-19
+@date: 18-Feb-27
 """
 
-import logging
 import time
 
-from utilities.seleniumdriver import SeleniumDriver
-
-
-from utilities.webdriver import WebDriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-
-logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',
-                    level=logging.INFO)
+from base.seleniumdriver import SeleniumDriver
 
 
 class LoginPage(SeleniumDriver):
@@ -25,11 +15,17 @@ class LoginPage(SeleniumDriver):
     _username_locator = "username"
     _password_locator = "password"
     _login_button_locator = "Login"
+    _profile_locator = "//span[1]/span/img"
+    _error_locator = "error"
+    _logout_locator = "//div/a[2][contains(text(),'Log Out')]"
 
     # Locator Types
     _username_locator_type = "id"
     _password_locator_type = "id"
     _login_locator_type = "id"
+    _profile_locator_type = "xpath"
+    _error_locator_type = "id"
+    _logout_locator_type = "xpath"
 
     def clear_fields(self):
         self.clear_field(self._username_locator, self._username_locator_type)
@@ -44,27 +40,29 @@ class LoginPage(SeleniumDriver):
     def click_login_button(self):
         self.click_element(self._login_button_locator, self._login_locator_type)
 
-    def login(self, username, password):
+    def login_page(self, username, password):
         self.clear_fields()
         self.enter_username(username)
         self.enter_password(password)
         self.click_login_button()
 
-    def loginSuccessful(self):
-        wdi = WebDriver()
-        self.driver = wdi.driver
-        time.sleep(5)
-        element = self.driver.find_element(By.XPATH, "//*[@id='oneHeader']//img")
-        element.click()
-        wait = WebDriverWait(self.driver, timeout=10, poll_frequency=0.5)
-        user_name = wait.until(EC.element_to_be_clickable((By.XPATH, "//span[1]/span/img")))
-        try:
-            if user_name is not None:
-                return True
-            else:
-                return False
-        except:
-            print("Element Not Found")
-            return False
+    def is_valid(self):
+        self.wait_for_element(self._profile_locator, self._profile_locator_type)
+        result = self.is_element_present(self._profile_locator, self._profile_locator_type)
+        return result
 
+    def invalid_login_page(self, username, password):
+        time.sleep(3)
+        self.click_element(self._profile_locator, self._profile_locator_type)
+        time.sleep(3)
+        self.click_element(self._logout_locator, self._logout_locator_type)
+        time.sleep(3)
+        self.clear_fields()
+        self.enter_username(username)
+        self.enter_password(password)
+        self.click_login_button()
 
+    def is_invalid(self):
+        self.wait_for_element(self._error_locator, self._error_locator_type)
+        result = self.get_text(self._error_locator, self._error_locator_type)
+        return result

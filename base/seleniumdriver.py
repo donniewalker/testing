@@ -20,10 +20,8 @@ class SeleniumDriver:
     def __init__(self, driver):
         self.driver = driver
 
-    def get_title(self):
-        return self.driver.title
-
-    def get_by_type(self, locator_type):
+    @staticmethod
+    def get_by_type(locator_type):
         locator_type = locator_type.lower()
         if locator_type == "id":
             return By.ID
@@ -37,6 +35,8 @@ class SeleniumDriver:
             return By.CLASS_NAME
         elif locator_type == "link":
             return By.LINK_TEXT
+        elif locator_type == "partial_link":
+            return By.PARTIAL_LINK_TEXT
         else:
             logging.info("# Locator Type Not Supported #")
 
@@ -49,6 +49,19 @@ class SeleniumDriver:
         except:
             logging.info("# Element not found #")
 
+        return element
+
+    def get_title(self):
+        return self.driver.title
+
+    def get_text(self, locator, locator_type, element=None):
+        try:
+            if locator:
+                element = self.get_element(locator, locator_type)
+            element = element.text
+            logging.info("# Text found on element #")
+        except:
+            logging.info("# Text not found on element #")
         return element
 
     def click_element(self, locator, locator_type, element=None):
@@ -95,11 +108,11 @@ class SeleniumDriver:
             return False
 
     def wait_for_element(self, locator, locator_type,
-                       timeout=0, pollFrequency=0.5):
+                       timeout=10, pollFrequency=0.5):
         element = None
         try:
             by_type = self.get_by_type(locator_type)
-            logging.info("# Waiting for element to become clickable")
+            logging.info("# Waiting for element to become clickable #")
             wait = WebDriverWait(self.driver, timeout=timeout,
                                  poll_frequency=pollFrequency,
                                  ignored_exceptions=[NoSuchElementException,

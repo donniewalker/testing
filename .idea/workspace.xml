@@ -3,11 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="26e90684-1cac-49c4-ab88-7a5368fc2448" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/loginpage.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/loginpage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/statespage.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/statespage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/logintest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/logintest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/seleniumdriver.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/seleniumdriver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/webdriver.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/webdriver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/formpagetest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/formpagetest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/seleniumdriver.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/webdriver.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,43 +18,46 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/logintest.py">
+        <entry file="file://$PROJECT_DIR$/tests/formpagetest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+            <state relative-caret-position="301">
+              <caret line="31" column="75" selection-start-line="31" selection-start-column="75" selection-end-line="31" selection-end-column="75" />
               <folding>
                 <element signature="e#84#98#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/loginpage.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="55" column="21" lean-forward="true" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
-              <folding>
-                <element signature="e#84#98#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utilities/seleniumdriver.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1051">
-              <caret line="8" selection-start-line="8" selection-end-line="11" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/utilities/webdriver.py">
+        <entry file="file://$PROJECT_DIR$/pages/formpage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+            <state relative-caret-position="1264">
+              <caret line="117" column="25" lean-forward="true" selection-start-line="117" selection-start-column="25" selection-end-line="117" selection-end-column="25" />
+              <folding>
+                <element signature="e#84#95#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/navigationpage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="346">
+              <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+              <folding>
+                <element signature="e#84#98#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/base/seleniumdriver.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
               <folding>
                 <element signature="e#84#98#0" expanded="true" />
               </folding>
@@ -100,7 +103,6 @@
         <option value="$PROJECT_DIR$/pages/login/login_page.py" />
         <option value="$PROJECT_DIR$/pages/internal/states/states_list.py" />
         <option value="$PROJECT_DIR$/pages/internal/login_internal/login_page.py" />
-        <option value="$PROJECT_DIR$/tests/conftest.py" />
         <option value="$PROJECT_DIR$/tests/login_internal/login_internal_page.py" />
         <option value="$PROJECT_DIR$/pages/internal/navigation/navigation_page.py" />
         <option value="$PROJECT_DIR$/pages/login_internal/login_internal_page.py" />
@@ -110,21 +112,28 @@
         <option value="$PROJECT_DIR$/base/webdriver_instance.py" />
         <option value="$PROJECT_DIR$/base/webdriverinstance.py" />
         <option value="$PROJECT_DIR$/utilities/webdriverinstance.py" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/base/webdriver.py" />
-        <option value="$PROJECT_DIR$/base/seleniumdriver.py" />
         <option value="$PROJECT_DIR$/pages/statespage.py" />
         <option value="$PROJECT_DIR$/utilities/services.py" />
+        <option value="$PROJECT_DIR$/base/navigation.py" />
         <option value="$PROJECT_DIR$/utilities/seleniumdriver.py" />
-        <option value="$PROJECT_DIR$/tests/logintest.py" />
-        <option value="$PROJECT_DIR$/pages/loginpage.py" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/utilities/webdriver.py" />
+        <option value="$PROJECT_DIR$/tests/conftest.py" />
+        <option value="$PROJECT_DIR$/pages/loginpage.py" />
+        <option value="$PROJECT_DIR$/tests/logintest.py" />
+        <option value="$PROJECT_DIR$/tests/guestcardtest.py" />
+        <option value="$PROJECT_DIR$/pages/guestcardpage.py" />
+        <option value="$PROJECT_DIR$/base/webdriver.py" />
+        <option value="$PROJECT_DIR$/base/seleniumdriver.py" />
+        <option value="$PROJECT_DIR$/tests/formpagetest.py" />
+        <option value="$PROJECT_DIR$/pages/navigationpage.py" />
+        <option value="$PROJECT_DIR$/pages/formpage.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
-    <option name="width" value="1280" />
+    <option name="width" value="1920" />
     <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -141,6 +150,11 @@
             <path>
               <item name="salesforce" type="b2602c69:ProjectViewProjectNode" />
               <item name="salesforce" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="salesforce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="salesforce" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="salesforce" type="b2602c69:ProjectViewProjectNode" />
@@ -177,16 +191,17 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/utilities" />
-      <recent name="$PROJECT_DIR$/pages" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/utilities" />
+      <recent name="$PROJECT_DIR$/pages" />
       <recent name="$PROJECT_DIR$/base" />
+      <recent name="$PROJECT_DIR$/utilities" />
+      <recent name="$PROJECT_DIR$/tests" />
+      <recent name="$PROJECT_DIR$/pages/internal" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/tests" />
       <recent name="$PROJECT_DIR$/pages" />
-      <recent name="$PROJECT_DIR$/pages/internal" />
+      <recent name="$PROJECT_DIR$/utilities" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -201,7 +216,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.logintest">
+  <component name="RunManager" selected="Python tests.Unittests for formpagetest.LoginTest">
     <configuration name="loginpage" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="salesforce" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -265,6 +280,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests for formpagetest.LoginTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="salesforce" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;formpagetest.LoginTest&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unittests for statespage.StatesList.test_state_field_populates" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="salesforce" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -284,9 +313,11 @@
       <item itemvalue="Python.logintest" />
       <item itemvalue="Python.loginpage" />
       <item itemvalue="Python tests.Unittests for statespage.StatesList.test_state_field_populates" />
+      <item itemvalue="Python tests.Unittests for formpagetest.LoginTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for formpagetest.LoginTest" />
         <item itemvalue="Python.logintest" />
         <item itemvalue="Python.loginpage" />
         <item itemvalue="Python tests.Unittests for statespage.StatesList.test_state_field_populates" />
@@ -308,35 +339,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_statespage_StatesList_test_state_field_populates - 2019.02.19 at 16h 39m 09s.xml">
-      <configuration name="Unittests for statespage.StatesList.test_state_field_populates" configurationId="tests" />
+    <history-entry file="Unittests_for_formpagetest_LoginTest - 2019.03.15 at 08h 27m 09s.xml">
+      <configuration name="Unittests for formpagetest.LoginTest" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_statespage_StatesList_test_state_field_populates - 2019.02.19 at 16h 45m 07s.xml">
-      <configuration name="Unittests for statespage.StatesList.test_state_field_populates" configurationId="tests" />
+    <history-entry file="Unittests_for_formpagetest_LoginTest - 2019.03.15 at 08h 27m 55s.xml">
+      <configuration name="Unittests for formpagetest.LoginTest" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_statespage_StatesList_test_state_field_populates - 2019.02.19 at 16h 49m 55s.xml">
-      <configuration name="Unittests for statespage.StatesList.test_state_field_populates" configurationId="tests" />
+    <history-entry file="Unittests_for_formpagetest_LoginTest - 2019.03.15 at 08h 28m 39s.xml">
+      <configuration name="Unittests for formpagetest.LoginTest" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_statespage_StatesList_test_state_field_populates - 2019.02.19 at 16h 50m 16s.xml">
-      <configuration name="Unittests for statespage.StatesList.test_state_field_populates" configurationId="tests" />
+    <history-entry file="Unittests_for_formpagetest_LoginTest - 2019.03.15 at 08h 29m 27s.xml">
+      <configuration name="Unittests for formpagetest.LoginTest" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_statespage_StatesList_test_state_field_populates - 2019.02.19 at 16h 50m 43s.xml">
-      <configuration name="Unittests for statespage.StatesList.test_state_field_populates" configurationId="tests" />
+    <history-entry file="Unittests_for_formpagetest_LoginTest - 2019.03.15 at 08h 31m 53s.xml">
+      <configuration name="Unittests for formpagetest.LoginTest" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_statespage_StatesList_test_state_field_populates - 2019.02.19 at 16h 51m 20s.xml">
-      <configuration name="Unittests for statespage.StatesList.test_state_field_populates" configurationId="tests" />
+    <history-entry file="Unittests_for_formpagetest_LoginTest - 2019.03.15 at 08h 33m 03s.xml">
+      <configuration name="Unittests for formpagetest.LoginTest" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_statespage_StatesList_test_state_field_populates - 2019.02.19 at 16h 51m 39s.xml">
-      <configuration name="Unittests for statespage.StatesList.test_state_field_populates" configurationId="tests" />
+    <history-entry file="Unittests_for_formpagetest_LoginTest - 2019.03.15 at 08h 33m 43s.xml">
+      <configuration name="Unittests for formpagetest.LoginTest" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_statespage_StatesList_test_state_field_populates - 2019.02.19 at 16h 52m 17s.xml">
-      <configuration name="Unittests for statespage.StatesList.test_state_field_populates" configurationId="tests" />
+    <history-entry file="Unittests_for_formpagetest_LoginTest - 2019.03.15 at 08h 35m 40s.xml">
+      <configuration name="Unittests for formpagetest.LoginTest" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_statespage_StatesList_test_state_field_populates - 2019.02.19 at 16h 52m 50s.xml">
-      <configuration name="Unittests for statespage.StatesList.test_state_field_populates" configurationId="tests" />
+    <history-entry file="Unittests_for_formpagetest_LoginTest - 2019.03.15 at 08h 36m 56s.xml">
+      <configuration name="Unittests for formpagetest.LoginTest" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_statespage_StatesList_test_state_field_populates - 2019.02.19 at 17h 21m 16s.xml">
-      <configuration name="Unittests for statespage.StatesList.test_state_field_populates" configurationId="tests" />
+    <history-entry file="Unittests_for_formpagetest_LoginTest - 2019.03.15 at 08h 38m 27s.xml">
+      <configuration name="Unittests for formpagetest.LoginTest" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -526,16 +557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor>
-            <caret column="117" selection-start-column="117" selection-end-column="117" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
@@ -547,16 +568,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/statespage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -609,39 +620,99 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utilities/seleniumdriver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1051">
-          <caret line="8" selection-start-line="8" selection-end-line="11" selection-end-column="40" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="96" selection-start-column="96" selection-end-column="96" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/logintest.py">
+    <entry file="file://$PROJECT_DIR$/tests/conftest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-          <folding>
-            <element signature="e#84#98#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="129">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/loginpage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="55" column="21" lean-forward="true" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+        <state relative-caret-position="314">
+          <caret line="43" column="29" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
           <folding>
             <element signature="e#84#98#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utilities/webdriver.py">
+    <entry file="file://$PROJECT_DIR$/tests/logintest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+        <state relative-caret-position="330">
+          <caret line="22" column="50" lean-forward="true" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
           <folding>
             <element signature="e#84#98#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/webdriver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <folding>
+            <element signature="e#84#98#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/seleniumdriver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="e#84#98#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/statespage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-38">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="17" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/navigationpage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+          <folding>
+            <element signature="e#84#98#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/formpagetest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="31" column="75" selection-start-line="31" selection-start-column="75" selection-end-line="31" selection-end-column="75" />
+          <folding>
+            <element signature="e#84#98#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/formpage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1264">
+          <caret line="117" column="25" lean-forward="true" selection-start-line="117" selection-start-column="25" selection-end-line="117" selection-end-column="25" />
+          <folding>
+            <element signature="e#84#95#0" expanded="true" />
           </folding>
         </state>
       </provider>

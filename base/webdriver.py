@@ -15,17 +15,15 @@ logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', datefmt='
 
 class WebDriver:
 
-    def __init__(self):
+    def getWebDriverInstance(self):
         chrome_options = Options()
         chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
         chrome_driver = "/Users/donniewalker/PycharmProjects/lib/chromedriver"
         self.driver = webdriver.Chrome(chrome_driver, options=chrome_options)
         self.base_url = "https://test.salesforce.com"
         self.window_before = self.driver.window_handles[0]
-
-    def getWebDriverInstance(self):
-        logging.info("## SETUP TEST ##")
+        logging.info("##### SETUP TEST #####")
         logging.info("# Initializing Webdriver #")
         # self.driver.maximize_window()
         self.driver.get(self.base_url)
-        print(self.window_before)
+        # print(self.window_before)
