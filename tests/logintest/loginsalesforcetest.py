@@ -8,7 +8,7 @@ import logging
 import unittest
 
 from base.webdriver import WebDriver
-from pages.loginpage import LoginPage
+from pages.loginpage.loginsalesforcepage import LoginPage
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',
                     level=logging.INFO)
@@ -19,7 +19,7 @@ class LoginTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.webdriver_instance = WebDriver()
-        cls.webdriver_instance.getWebDriverInstance()
+        cls.webdriver_instance.get_salesforce_webdriver_instance()
         cls.driver = cls.webdriver_instance.driver
 
     def test_one_login_valid(self):

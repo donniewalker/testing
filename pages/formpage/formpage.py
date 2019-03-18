@@ -4,8 +4,8 @@
 @date: 18-Feb-27
 """
 
-from tests.base import SeleniumDriver
-from tests.pages.navigationpage import NavigationPage
+from base import SeleniumDriver
+from pages.navigationpage import NavigationPage
 
 
 class FormPage(SeleniumDriver):
@@ -104,6 +104,9 @@ class FormPage(SeleniumDriver):
         self.click_element(locator="//*[@id='radio-0-23']/following-sibling::label", locator_type="xpath")
         self.click_element(locator="//span[contains(text(),'I AGREE TO THE ABOVE TERMS.')]/preceding-sibling::span",
                            locator_type="xpath")
+
+    def click_submit(self):
+        self.click_element(locator="input-", locator_type="id")
 
     def click_submit(self):
         self.click_element(locator="//button[contains(text(),'Submit')]", locator_type="xpath")

@@ -6,7 +6,7 @@
 
 import time
 
-from tests.base import SeleniumDriver
+from base import SeleniumDriver
 
 
 class LoginPage(SeleniumDriver):
@@ -22,7 +22,7 @@ class LoginPage(SeleniumDriver):
     # Locator Types
     _username_locator_type = "id"
     _password_locator_type = "id"
-    _login_locator_type = "id"
+    _login_button_locator_type = "id"
     _profile_locator_type = "xpath"
     _error_locator_type = "id"
     _logout_locator_type = "xpath"
@@ -38,7 +38,7 @@ class LoginPage(SeleniumDriver):
         self.send_keys(password, self._password_locator, self._password_locator_type)
 
     def click_login_button(self):
-        self.click_element(self._login_button_locator, self._login_locator_type)
+        self.click_element(self._login_button_locator, self._login_button_locator_type)
 
     def login_page(self, username, password):
         self.clear_fields()
