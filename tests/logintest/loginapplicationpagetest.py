@@ -8,7 +8,7 @@ import logging
 import unittest
 
 from utilities.webdriver import WebDriver
-from pages.loginpage.loginapplicationpage import LoginCommunityPage
+from pages.loginpage.loginapplicationpage import LoginApplicationPage
 from pages.navigationpage import NavigationPage
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',
@@ -27,8 +27,8 @@ class LoginApplicationPageTest(unittest.TestCase):
 
     def test_one_new_applicant_login_valid(self):
         logging.info("##### BEGIN VALID COMMUNITY LOGIN NEW APPLICANT TEST #####")
-        new_applicant = LoginCommunityPage(self.driver)
-        new_applicant.community_apply("janez@fonda.com", "Jane", "Fonda")
+        new_applicant = LoginApplicationPage(self.driver)
+        new_applicant.community_apply("janet@fonda.com", "Jane", "Fonda")
 
     @classmethod
     def tearDownClass(cls):
