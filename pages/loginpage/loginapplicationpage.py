@@ -4,11 +4,11 @@
 @date: 18-Feb-27
 """
 
-from base import SeleniumDriver
+from utilities.seleniumdriver import SeleniumDriver
 from pages.navigationpage import NavigationPage
 
 
-class LoginCommunityPage(SeleniumDriver):
+class LoginApplicationPage(SeleniumDriver):
     def __init__(self, driver):
         super().__init__(driver)
         self.nav = NavigationPage(self.driver)
@@ -46,7 +46,6 @@ class LoginCommunityPage(SeleniumDriver):
         self.click_element(self._continue_button_locator, self._continue_button_locator_type)
 
     def community_apply(self, email, first_name, last_name):
-        self.nav.navigate_to_community_apply()
         self.enter_email(email)
         self.click_continue_button()
         self.enter_first_name(first_name)
@@ -54,12 +53,10 @@ class LoginCommunityPage(SeleniumDriver):
         self.click_continue_button()
 
     def community_apply_multiple(self, email):
-        self.nav.navigate_to_community_apply()
         self.enter_email(email)
         self.click_continue_button()
 
     def community_resident(self, email, password):
-        self.nav.navigate_to_community_resident()
         self.enter_email(email)
         self.enter_password(password)
         self.click_continue_button()
