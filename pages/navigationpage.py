@@ -6,7 +6,7 @@
 
 import logging
 
-from tests.base import SeleniumDriver
+from utilities.seleniumdriver import SeleniumDriver
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',
                     level=logging.INFO)
@@ -18,21 +18,22 @@ class NavigationPage(SeleniumDriver):
         super().__init__(driver)
         self.driver = driver
 
-    def navigate_to_form(self):
-        logging.info("# Navigating to the Form page #")
-        property_page = self.wait_for_element(locator="//*[@id='oneHeader']//a/span[1][contains(text(),"
-                                                           "'Properties')]", locator_type="xpath", pollFrequency=1)
-        self.click_element(locator="", locator_type="", element=property_page)
-        properties_element = self.wait_for_element(locator="679", locator_type="partial_link", pollFrequency=1)
-        self.click_element(locator="", locator_type="", element=properties_element)
-        form_element = self.wait_for_element(locator="//a[contains(@href,'https://sandbox-efficiency-page-"
-                                                           "8761-1694a6059cf.cs69.force.com/s/guest-card?moc="
-                                                           "On_Site&propertyId=a1B2D0000003JtUUAU&pNum=679')]",
-                                                           locator_type="xpath", pollFrequency=1)
-        window_before = self.driver.window_handles[0]
-        print(window_before)
-        self.click_element(locator="", locator_type="", element=form_element)
-        self.wait_for_element(locator="input-2", locator_type="id", pollFrequency=1)
-        window_after = self.driver.window_handles[1]
-        self.driver.switch_to.window(window_after)
-        print(window_after)
+    def navigate_to_single_property_form(self):
+        logging.info("# Navigating to the Single Property Form Page #")
+        self.driver.get("https://sandbox-efficiency-page-8761-1694a6059cf.cs69.force.com/s/"
+                        "guest-card?moc=On_Site&propertyId=a1B2D0000003JtUUAU&pNum=679")
+
+    def navigate_to_multi_property_form(self):
+        logging.info("# Navigating to the Single Property Form Page #")
+        self.driver.get("https://sandbox-efficiency-page-8761-1694a6059cf.cs69.force.com/s/"
+                        "guest-card?moc=On_Site&marketingProperties=679,677,489")
+
+    def navigate_to_online_application(self):
+        logging.info("# Navigating to the Single Property Form Page #")
+        self.driver.get("https://sandbox-efficiency-page-8761-1694a6059cf.cs69.force.com/s/"
+                        "login?startUrl=/s/application&pNum=679&propertyId=a1B2D0000003JtUUAU")
+
+    def navigate_to_community_home_page(self):
+        logging.info("# Navigating to the Single Property Form Page #")
+        self.driver.get("https://sandbox-efficiency-page-8761-1694a6059cf.cs69.force.com/s/login?pNum=679")
+

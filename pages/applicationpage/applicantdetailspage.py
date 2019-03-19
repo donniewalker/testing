@@ -4,45 +4,39 @@
 @date: 18-Feb-27
 """
 
-from base import SeleniumDriver
-from pages.navigationpage import NavigationPage
+from utilities.seleniumdriver import SeleniumDriver
+from selenium.webdriver.support.select import Select
 
 
-class FormPage(SeleniumDriver):
-
-    def __init__(self, driver):
-        super().__init__(driver)
-        self.driver = driver
-        self.nav = NavigationPage(driver)
+class ApplicantDetailsPage(SeleniumDriver):
 
     # Locators
-    _first_name = "input-2"
-    _preferred_name = "input-3"
-    _last_name = "input-4"
-    _street = "input-6"
-    _city = "input-7"
-    _zip_code = "input-9"
-    _cell = "input-10"
-    _email = "input-11"
+    _preferred_name = "input-41"
+    _middle_name = "input-42"
+    _street = "input-10"
+    _city = "input-11"
+    _zip_code = "input-13"
+    _email = "input-44"
+    _cell = "input-49"
 
     # Locator types
-    _first_name_type = "id"
     _preferred_name_type = "id"
-    _last_name_type = "id"
+    _middle_name_type = "id"
     _street_type = "id"
     _city_type = "id"
     _zip_code_type = "id"
     _cell_type = "id"
     _email_type = "id"
 
-    def enter_first_name(self, first_name):
-        self.send_keys(first_name, self._first_name, self._first_name_type)
+    def clear_fields(self):
+        self.wait_for_element(self._email, self._email_type)
+        self.clear_field(self._email, self._email_type)
 
     def enter_preferred_name(self, preferred_name):
         self.send_keys(preferred_name, self._preferred_name, self._preferred_name_type)
 
-    def enter_last_name(self, last_name):
-        self.send_keys(last_name, self._last_name, self._last_name_type)
+    def enter_middle_name(self, middle_name):
+        self.send_keys(middle_name, self._middle_name, self._middle_name_type)
 
     def enter_street(self, street):
         self.send_keys(street, self._street, self._street_type)
@@ -60,49 +54,43 @@ class FormPage(SeleniumDriver):
         self.send_keys(email, self._email, self._email_type)
 
     def select_country(self):
-        self.click_element(locator="input-24", locator_type="id")
-        self.click_element(locator="input-24-0-24", locator_type="id")
+        self.click_element(locator="input-28", locator_type="id")
+        self.click_element(locator="input-28-0-28", locator_type="id")
 
     def select_state(self):
-        self.click_element(locator="input-27", locator_type="id")
-        self.click_element(locator="input-27-4-27", locator_type="id")
+        self.click_element(locator="input-31", locator_type="id")
+        self.click_element(locator="input-31-4-31", locator_type="id")
+
+    def select_birth_date(self):
+        self.click_element(locator="input-46", locator_type="id")
+        self.click_element(locator="select-element-68", locator_type="id")
+        year_element = self.get_element(locator="input-31-4-31", locator_type="id")
+        birth_value = Select(year_element)
+        birth_value.select_by_value("2000")
 
     def select_gender(self):
-        self.click_element(locator="input-30", locator_type="id")
-        self.click_element(locator="input-30-1-30", locator_type="id")
+        self.click_element(locator="input-55", locator_type="id")
+        self.click_element(locator="input-55-2-5", locator_type="id")
 
-    def select_year(self):
-        self.click_element(locator="input-33", locator_type="id")
-        self.click_element(locator="input-33-0-33", locator_type="id")
+    def select_id_option(self):
+        self.click_element(locator="input-60", locator_type="id")
+        self.click_element(locator="60-1-60", locator_type="id")
 
-    def select_class(self):
-        self.click_element(locator="input-36", locator_type="id")
-        self.click_element(locator="input-36-0-36", locator_type="id")
+    def enter_id_option(self, ssn):
+        self.send_keys(ssn, locator="input-51", locator_type="id")
 
-    def select_description(self):
-        self.click_element(locator="input-39", locator_type="id")
-        self.click_element(locator="input-39-0-39", locator_type="id")
+    def select_travel_id_option(self):
+        self.click_element(locator="input-65", locator_type="id")
+        self.click_element(locator="65-0-65", locator_type="id")
 
-    def select_discovered(self):
-        self.click_element(locator="input-45", locator_type="id")
-        self.click_element(locator="input-45-4-45", locator_type="id")
+    def click_continue(self):
+        self.click_element(locator="//button[contains(text(),'Save and Continue')]", locator_type="xpath")
 
-    def click_housing(self):
-        self.click_element(locator="//*[@id='radio-0-20']/following-sibling::label", locator_type="xpath")
-
-    def click_text_opt_in(self):
-        self.click_element(locator="//*[@id='radio-0-23']/following-sibling::label", locator_type="xpath")
-        self.click_element(locator="//span[contains(text(),'I AGREE TO THE ABOVE TERMS.')]/preceding-sibling::span",
-                           locator_type="xpath")
-
-    def click_submit(self):
-        self.click_element(locator="//button[contains(text(),'Submit')]", locator_type="xpath")
-
-    def submit_form_all(self, first_name, preferred_name, last_name, street, city, zip_code, cell, email):
-        self.nav.navigate_to_community()
-        self.enter_first_name(first_name)
+    def submit_applicant_details(self, preferred_name, middle_name, street, city, zip_code, cell,
+                          email, ssn):
+        self.clear_fields()
         self.enter_preferred_name(preferred_name)
-        self.enter_last_name(last_name)
+        self.enter_middle_name(middle_name)
         self.select_country()
         self.enter_street(street)
         self.enter_city(city)
@@ -110,18 +98,10 @@ class FormPage(SeleniumDriver):
         self.enter_zip_code(zip_code)
         self.enter_cell(cell)
         self.enter_email(email)
+        self.select_birth_date()
         self.select_gender()
-        self.select_year()
-        self.select_class()
-        self.select_description()
-        self.click_housing()
-        self.select_discovered()
-        self.select_property_one()
-        self.select_property_two()
-        self.select_property_three()
-        self.click_text_opt_in()
-        self.click_submit()
-
-    def submit_form_partial(self):
-        pass
+        self.select_id_option()
+        self.enter_id_option(ssn)
+        self.select_travel_id_option()
+        self.click_continue()
 
