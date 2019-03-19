@@ -15,7 +15,7 @@ logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', datefmt='
                     level=logging.INFO)
 
 
-class FormSinglePropertyTest(unittest.TestCase):
+class FormSinglePropertyPageTest(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
