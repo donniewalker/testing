@@ -8,28 +8,28 @@ import logging
 import unittest
 
 from base import WebDriver
-from pages.loginpage.loginsalesforcepage import LoginPage
 from pages import FormPage
+from pages.navigationpage import NavigationPage
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',
                     level=logging.INFO)
 
 
-class LoginTest(unittest.TestCase):
+class FormTest(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
         cls.webdriver_instance = WebDriver()
-        cls.webdriver_instance.getWebDriverInstance()
+        cls.webdriver_instance.get_webdriver_instance()
         cls.driver = cls.webdriver_instance.driver
-        log_in = LoginPage(cls.driver)
-        log_in.login_page("test-ctbawsg8setw@example.com", "y$9lB0|YDD")
+        user = NavigationPage(cls.driver)
+        user.navigate_to_single_property_form()
 
     def test_submit_form(self):
         logging.info("##### BEGIN SUBMIT FULL FORM #####")
-        submit_full_form = FormPage(self.driver)
-        submit_full_form.submit_form_all("Henry", "Hen", "Madison", "1234 Yorktown St", "New Hampshire", "67567",
-                                         "3546789876", "henry@madison.com")
+        prospect = FormPage(self.driver)
+        prospect.submit_single_property_form("Henry", "Hen", "Madison", "1234 Yorktown St", "New Hampshire", "67567",
+                                             "3546789876", "henry@madison.com")
 
     @classmethod
     def tearDownClass(cls):
