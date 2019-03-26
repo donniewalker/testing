@@ -10,6 +10,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import *
+from selenium.webdriver.common.keys import Keys
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',
                     level=logging.INFO)
@@ -21,30 +22,30 @@ class SeleniumDriver:
         self.driver = driver
 
     @staticmethod
-    def get_by_type(locator_type):
-        locator_type = locator_type.lower()
-        if locator_type == "id":
+    def get_by_type(locator):
+        locator = locator.lower()
+        if locator == "id":
             return By.ID
-        elif locator_type == "name":
+        elif locator == "name":
             return By.NAME
-        elif locator_type == "xpath":
+        elif locator == "xpath":
             return By.XPATH
-        elif locator_type == "css":
+        elif locator == "css":
             return By.CSS_SELECTOR
-        elif locator_type == "class":
+        elif locator == "class":
             return By.CLASS_NAME
-        elif locator_type == "link":
+        elif locator == "link":
             return By.LINK_TEXT
-        elif locator_type == "partial_link":
+        elif locator == "partial_link":
             return By.PARTIAL_LINK_TEXT
         else:
             logging.info("# Locator Type Not Supported #")
 
-    def get_element(self, locator, locator_type):
+    def get_element(self, locator):
         element = None
         try:
-            by_type = self.get_by_type(locator_type)
-            element = self.driver.find_element(by_type, locator)
+            by_type = self.get_by_type(locator[1])
+            element = self.driver.find_element(by_type, locator[0])
             logging.info("# Element found #")
         except:
             logging.info("# Element not found #")
@@ -54,49 +55,61 @@ class SeleniumDriver:
     def get_title(self):
         return self.driver.title
 
-    def get_text(self, locator, locator_type, element=None):
+    def get_text(self, locator, element=None):
         try:
             if locator:
-                element = self.get_element(locator, locator_type)
+                element = self.get_element(locator)
             element = element.text
             logging.info("# Text found on element #")
         except:
             logging.info("# Text not found on element #")
         return element
 
-    def click_element(self, locator, locator_type, element=None):
+    def click_element(self, locator, element=None):
         try:
             if locator:
-                element = self.get_element(locator, locator_type)
+                element = self.get_element(locator)
             element.click()
             logging.info("# Clicking on element #")
         except:
             logging.info("# Element not found #")
 
-    def clear_field(self, locator, locator_type, element=None):
+    def clear_field(self, locator, element=None):
         try:
             if locator:
-                element = self.get_element(locator, locator_type)
+                element = self.get_element(locator)
             element.click()
             element.clear()
             logging.info("# Clearing field #")
         except:
             logging.info("# Element not found #")
 
-    def send_keys(self, data, locator, locator_type):
+    def clear_field_alt(self, locator, element=None):
         try:
             if locator:
-                by_type = self.get_by_type(locator_type)
-                element = self.driver.find_element(by_type, locator)
-                element.send_keys(data)
-                logging.info("# Entering data #")
+                element = self.get_element(locator)
+            element.click()
+            element.send_keys(Keys.COMMAND, 'a')
+            element.send_keys(Keys.DELETE)
+            logging.info("# Clearing field #")
         except:
             logging.info("# Element not found #")
 
-    def is_element_present(self, locator, locator_type, element=None):
+    def send_keys(self, data, locator, element=None):
         try:
             if locator:
-                element = self.get_element(locator, locator_type)
+                element = self.get_element(locator)
+            element.click()
+            element.clear()
+            element.send_keys(data)
+            logging.info("# Entering data #")
+        except:
+            logging.info("# Element not found #")
+
+    def is_element_present(self, locator, element=None):
+        try:
+            if locator:
+                element = self.get_element(locator)
             if element is not None:
                 logging.info("# Element is present")
                 return True
@@ -107,18 +120,17 @@ class SeleniumDriver:
             logging.info("# Element not found #")
             return False
 
-    def wait_for_element(self, locator, locator_type,
-                       timeout=10, pollFrequency=0.5):
+    def wait_for_element(self, locator, timeout=10, pollFrequency=0.5):
         element = None
         try:
-            by_type = self.get_by_type(locator_type)
+            by_type = self.get_by_type(locator[1])
             logging.info("# Waiting for element to become clickable #")
             wait = WebDriverWait(self.driver, timeout=timeout,
                                  poll_frequency=pollFrequency,
                                  ignored_exceptions=[NoSuchElementException,
                                                      ElementNotVisibleException,
                                                      ElementNotSelectableException])
-            element = wait.until(EC.element_to_be_clickable((by_type, locator)))
+            element = wait.until(EC.element_to_be_clickable((by_type, locator[0])))
             logging.info("# Element found #")
         except:
             logging.info("# Element not found #")

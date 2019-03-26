@@ -5,103 +5,117 @@
 """
 
 from utilities.seleniumdriver import SeleniumDriver
-from selenium.webdriver.support.select import Select
+from selenium.webdriver.common.by import By
 
 
 class ApplicantDetailsPage(SeleniumDriver):
 
     # Locators
-    _preferred_name = "input-41"
-    _middle_name = "input-42"
-    _street = "input-10"
-    _city = "input-11"
-    _zip_code = "input-13"
-    _email = "input-44"
-    _cell = "input-49"
+    locators = {
+        "header": ["((//h2)[1]/following::div)[7]", "xpath"],
+        "first_name": ["//label[contains(text(),'Legal First Name')]/following::input[1]", "xpath"],
+        "preferred_name": ["//label[contains(text(),'Preferred First Name')]/following::input[1]", "xpath"],
+        "middle_name": ["//label[contains(text(),'Middle Name')]/following::input[1]", "xpath"],
+        "last_name": ["//label[contains(text(),'Last Name')]/following::input[1]", "xpath"],
+        "street": ["(//label[contains(text(),'Street')]/following::textarea)[1]", "xpath"],
+        "city": ["//label[contains(text(),'City')]/following::input[1]", "xpath"],
+        "zip_code": ["//label[contains(text(),'Zip')]/following::input[1]", "xpath"],
+        "email": ["//label[contains(text(),'Email')]/following::input[1]", "xpath"],
+        "cell": ["//label[contains(text(),'Cell')]/following::input[1]", "xpath"],
+        "birth": ["//label[contains(text(),'Birthdate')]/following::input[1]", "xpath"],
+        "country": ["//label[contains(text(),'Country')]/following::input[1]", "xpath"],
+        "state": ["//label[contains(text(),'State')]/following::input[1]", "xpath"],
+        "gender": ["//label[contains(text(),'Gender')]/following::input[1]", "xpath"],
+        "id_option": ["//label[contains(text(),'Identification Options')]/following::input[1]", "xpath"],
+        "id_number": ["//label[contains(text(),'Identification Number')]/following::input[1]", "xpath"],
+        "travel_id_option": ["//label[contains(text(),'Travel Identification Options')]/following::input[1]",
+                             "xpath"],
+        "travel_id_number": ["//label[contains(text(),'Travel Identification Number')]/following::input[1]",
+                             "xpath"],
+        "save_continue_button": ['//button[contains(text(),"Save and Continue")]', "xpath"],
+        "previous_button": ["//button[contains(text(),'Previous')]", "xpath"]
+    }
 
-    # Locator types
-    _preferred_name_type = "id"
-    _middle_name_type = "id"
-    _street_type = "id"
-    _city_type = "id"
-    _zip_code_type = "id"
-    _cell_type = "id"
-    _email_type = "id"
-
-    def clear_fields(self):
-        self.wait_for_element(self._email, self._email_type)
-        self.clear_field(self._email, self._email_type)
+    def enter_first_name(self, first_name):
+        self.send_keys(first_name, self.locators["first_name"])
 
     def enter_preferred_name(self, preferred_name):
-        self.send_keys(preferred_name, self._preferred_name, self._preferred_name_type)
+        self.send_keys(preferred_name, self.locators["preferred_name"])
 
     def enter_middle_name(self, middle_name):
-        self.send_keys(middle_name, self._middle_name, self._middle_name_type)
+        self.send_keys(middle_name, self.locators["middle_name"])
+
+    def enter_last_name(self, last_name):
+        self.send_keys(last_name, self.locators["last_name"])
 
     def enter_street(self, street):
-        self.send_keys(street, self._street, self._street_type)
+        self.send_keys(street, self.locators["street"])
 
     def enter_city(self, city):
-        self.send_keys(city, self._city, self._city_type)
+        self.send_keys(city, self.locators["city"])
 
     def enter_zip_code(self, zip_code):
-        self.send_keys(zip_code, self._zip_code, self._zip_code_type)
+        self.send_keys(zip_code, self.locators["zip_code"])
 
     def enter_cell(self, cell):
-        self.send_keys(cell, self._cell, self._cell_type)
+        self.send_keys(cell, self.locators["cell"])
 
     def enter_email(self, email):
-        self.send_keys(email, self._email, self._email_type)
+        self.send_keys(email, self.locators["email"])
 
-    def select_country(self):
-        self.click_element(locator="input-28", locator_type="id")
-        self.click_element(locator="input-28-0-28", locator_type="id")
+    def enter_country(self, country):
+        self.click_element(self.locators["country"])
+        country_element = self.driver.find_element(By.XPATH, f'//*[@title="{country}"]')
+        country_element.click()
 
-    def select_state(self):
-        self.click_element(locator="input-31", locator_type="id")
-        self.click_element(locator="input-31-4-31", locator_type="id")
+    def enter_state(self, state):
+        self.click_element(self.locators["state"])
+        state_element = self.driver.find_element(By.XPATH, f'//*[@title="{state}"]')
+        state_element.click()
 
-    def select_birth_date(self):
-        self.click_element(locator="input-46", locator_type="id")
-        self.click_element(locator="select-element-68", locator_type="id")
-        year_element = self.get_element(locator="input-31-4-31", locator_type="id")
-        birth_value = Select(year_element)
-        birth_value.select_by_value("2000")
+    def enter_birth_date(self, birth_date):
+        self.send_keys(birth_date, self.locators["birth"])
 
-    def select_gender(self):
-        self.click_element(locator="input-55", locator_type="id")
-        self.click_element(locator="input-55-2-5", locator_type="id")
+    def enter_gender(self, gender):
+        self.click_element(self.locators["gender"])
+        gender_element = self.driver.find_element(By.XPATH, f'//*[@title="{gender}"]')
+        gender_element.click()
 
-    def select_id_option(self):
-        self.click_element(locator="input-60", locator_type="id")
-        self.click_element(locator="60-1-60", locator_type="id")
+    def enter_id_option(self, id_option):
+        self.click_element(self.locators["id_option"])
+        id_option_element = self.driver.find_element(By.XPATH, f'//*[@title="{id_option}"]')
+        id_option_element.click()
 
-    def enter_id_option(self, ssn):
-        self.send_keys(ssn, locator="input-51", locator_type="id")
+    def enter_id_number(self, id_number):
+        self.send_keys(id_number, self.locators["id_number"])
 
-    def select_travel_id_option(self):
-        self.click_element(locator="input-65", locator_type="id")
-        self.click_element(locator="65-0-65", locator_type="id")
+    def enter_travel_id_option(self, travel_id_option):
+        self.click_element(self.locators["travel_id_option"])
+        travel_id_option_element = self.driver.find_element(By.XPATH, f'(//*[@title="{travel_id_option}"])[2]')
+        travel_id_option_element.click()
 
-    def click_continue(self):
-        self.click_element(locator="//button[contains(text(),'Save and Continue')]", locator_type="xpath")
+    def enter_travel_id_number(self, travel_id_number):
+        self.send_keys(travel_id_number, self.locators["travel_id_number"])
 
-    def submit_applicant_details(self, preferred_name, middle_name, street, city, zip_code, cell,
-                          email, ssn):
-        self.clear_fields()
-        self.enter_preferred_name(preferred_name)
-        self.enter_middle_name(middle_name)
-        self.select_country()
-        self.enter_street(street)
-        self.enter_city(city)
-        self.select_state()
-        self.enter_zip_code(zip_code)
-        self.enter_cell(cell)
-        self.enter_email(email)
-        self.select_birth_date()
-        self.select_gender()
-        self.select_id_option()
-        self.enter_id_option(ssn)
-        self.select_travel_id_option()
-        self.click_continue()
+    def click_save_continue_button(self):
+        self.click_element(self.locators["save_continue_button"])
 
+    def submit_applicant_details(self, first_name, preferred_name, middle_name, last_name, street, city, country, state,
+                                 zip_code, cell, email, gender, birth_date, id_option, id_number, travel_id_option,
+                                 travel_id_number):
+        self.wait_for_element(self.locators["header"])
+        header = self.get_text(self.locators["header"])
+        while header != "Applicant Details":
+            self.click_element(self.locators["previous_button"])
+            if header == "Applicant Details":
+                break
+            else:
+                break
+        self.wait_for_element(self.locators["first_name"])
+        for key, value in self.locators.items():
+            user_input = self.get_element(value)
+            user_input.get_attribute(user_input)
+            if user_input is None:
+                self.enter_(key)(key)
+            else:
+                self.click_save_continue_button()
