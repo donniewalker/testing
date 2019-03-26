@@ -4,12 +4,16 @@
     <list default="true" id="26e90684-1cac-49c4-ab88-7a5368fc2448" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/pages/applicationpage/applicantdetailspage.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/applicationpage/applicantdetailspage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/loginpage/loginapplicationpage.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/loginpage/loginapplicationpage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/navigationpage.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/navigationpage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/applicationtest/applicationdetailspagetest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/applicationtest/applicationdetailspagetest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/logintest/loginsalesforcetest.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/utilities/seleniumdriver.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/seleniumdriver.py" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/tests/logintest/loginsalesforcetest.py" beforeDir="false" />
+>>>>>>> 8a5eba6deae094018f5aa2966bc845dd948fbea0
       <change beforePath="$PROJECT_DIR$/utilities/webdriver.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/webdriver.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,6 +25,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/tests/applicationtest/applicationdetailspagetest.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="570">
@@ -61,21 +66,53 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="248">
               <caret line="52" selection-start-line="52" selection-end-line="52" />
+=======
+        <entry file="file://$PROJECT_DIR$/pages/loginpage/loginapplicationpage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="538">
+              <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+>>>>>>> 8a5eba6deae094018f5aa2966bc845dd948fbea0
               <folding>
-                <element signature="e#84#98#0" expanded="true" />
+                <element signature="e#84#135#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/loginpage/loginapplicationpage.py">
+        <entry file="file://$PROJECT_DIR$/tests/logintest/loginpagetest.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="315">
               <caret line="21" column="26" lean-forward="true" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
               <folding>
                 <element signature="e#84#135#0" expanded="true" />
               </folding>
+=======
+            <state relative-caret-position="323">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="136">
+                <caret line="8" column="81" selection-start-line="8" selection-start-column="81" selection-end-line="8" selection-end-column="81" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utilities/webdriver.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+>>>>>>> 8a5eba6deae094018f5aa2966bc845dd948fbea0
             </state>
           </provider>
         </entry>
@@ -130,6 +167,10 @@
         <option value="$PROJECT_DIR$/pages/statespage.py" />
         <option value="$PROJECT_DIR$/utilities/services.py" />
         <option value="$PROJECT_DIR$/base/navigation.py" />
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/utilities/seleniumdriver.py" />
+>>>>>>> 8a5eba6deae094018f5aa2966bc845dd948fbea0
         <option value="$PROJECT_DIR$/tests/conftest.py" />
         <option value="$PROJECT_DIR$/pages/loginpage.py" />
         <option value="$PROJECT_DIR$/tests/logintest.py" />
@@ -144,12 +185,18 @@
         <option value="$PROJECT_DIR$/tests/logintest/logincommunitypagetest.py" />
         <option value="$PROJECT_DIR$/pages/loginpage/logincommunitypage.py" />
         <option value="$PROJECT_DIR$/tests/logintest/loginapplicationpagetest.py" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/pages/navigationpage.py" />
         <option value="$PROJECT_DIR$/pages/loginpage/loginapplicationpage.py" />
         <option value="$PROJECT_DIR$/tests/applicationtest/applicationdetailspagetest.py" />
         <option value="$PROJECT_DIR$/utilities/webdriver.py" />
         <option value="$PROJECT_DIR$/utilities/seleniumdriver.py" />
         <option value="$PROJECT_DIR$/pages/applicationpage/applicantdetailspage.py" />
+=======
+        <option value="$PROJECT_DIR$/utilities/webdriver.py" />
+        <option value="$PROJECT_DIR$/pages/loginpage/__init__.py" />
+        <option value="$PROJECT_DIR$/pages/__init__.py" />
+>>>>>>> 8a5eba6deae094018f5aa2966bc845dd948fbea0
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -273,8 +320,13 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Python tests.Unittests for applicationdetailspagetest.ApplicantDetailsPageTest">
     <configuration name="applicantdetailspage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
+  <component name="RunManager" selected="Python tests.Unittests for loginpagetest.LoginPageTest">
+    <configuration name="loginpage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+>>>>>>> 8a5eba6deae094018f5aa2966bc845dd948fbea0
       <module name="salesforce" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -282,7 +334,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+<<<<<<< HEAD
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pages/applicationpage" />
+=======
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pages" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pages/loginpage.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="logintest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="salesforce" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+>>>>>>> 8a5eba6deae094018f5aa2966bc845dd948fbea0
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -295,6 +372,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="Unittests for applicationdetailspagetest.ApplicantDetailsPageTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="salesforce" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -310,6 +388,9 @@
       <method v="2" />
     </configuration>
     <configuration name="Unittests for applicationdetailspagetest.ApplicantDetailsPageTest.test_one_submit_applicant_details_form" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+=======
+    <configuration name="Unittests for formpagetest.LoginTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+>>>>>>> 8a5eba6deae094018f5aa2966bc845dd948fbea0
       <module name="salesforce" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -323,35 +404,60 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="Unittests for applicationdetailspagetest.ApplicantDetailsPageTest.test_two_submit_applicant_details" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+=======
+    <configuration name="Unittests for loginpagetest.LoginPageTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+>>>>>>> 8a5eba6deae094018f5aa2966bc845dd948fbea0
       <module name="salesforce" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
+<<<<<<< HEAD
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/applicationtest" />
+=======
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/logintest" />
+>>>>>>> 8a5eba6deae094018f5aa2966bc845dd948fbea0
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
+<<<<<<< HEAD
       <option name="_new_target" value="&quot;applicationdetailspagetest.ApplicantDetailsPageTest.test_two_submit_applicant_details&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Unittests for formpagetest.LoginTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+=======
+      <option name="_new_target" value="&quot;loginpagetest.LoginPageTest&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for statespage.StatesList.test_state_field_populates" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+>>>>>>> 8a5eba6deae094018f5aa2966bc845dd948fbea0
       <module name="salesforce" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
+<<<<<<< HEAD
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+=======
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pages" />
+>>>>>>> 8a5eba6deae094018f5aa2966bc845dd948fbea0
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
+<<<<<<< HEAD
       <option name="_new_target" value="&quot;formpagetest.LoginTest&quot;" />
+=======
+      <option name="_new_target" value="&quot;statespage.StatesList.test_state_field_populates&quot;" />
+>>>>>>> 8a5eba6deae094018f5aa2966bc845dd948fbea0
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <list>
+<<<<<<< HEAD
       <item itemvalue="Python.applicantdetailspage" />
       <item itemvalue="Python tests.Unittests for formpagetest.LoginTest" />
       <item itemvalue="Python tests.Unittests for applicationdetailspagetest.ApplicantDetailsPageTest" />
@@ -365,6 +471,21 @@
         <item itemvalue="Python tests.Unittests for applicationdetailspagetest.ApplicantDetailsPageTest.test_one_submit_applicant_details_form" />
         <item itemvalue="Python.applicantdetailspage" />
         <item itemvalue="Python tests.Unittests for formpagetest.LoginTest" />
+=======
+      <item itemvalue="Python.logintest" />
+      <item itemvalue="Python.loginpage" />
+      <item itemvalue="Python tests.Unittests for statespage.StatesList.test_state_field_populates" />
+      <item itemvalue="Python tests.Unittests for formpagetest.LoginTest" />
+      <item itemvalue="Python tests.Unittests for loginpagetest.LoginPageTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Unittests for loginpagetest.LoginPageTest" />
+        <item itemvalue="Python tests.Unittests for formpagetest.LoginTest" />
+        <item itemvalue="Python.logintest" />
+        <item itemvalue="Python.loginpage" />
+        <item itemvalue="Python tests.Unittests for statespage.StatesList.test_state_field_populates" />
+>>>>>>> 8a5eba6deae094018f5aa2966bc845dd948fbea0
       </list>
     </recent_temporary>
   </component>
@@ -382,6 +503,7 @@
     <servers />
   </component>
   <component name="TestHistory">
+<<<<<<< HEAD
     <history-entry file="Unittests_for_applicationdetailspagetest_ApplicantDetailsPageTest - 2019.03.24 at 16h 41m 22s.xml">
       <configuration name="Unittests for applicationdetailspagetest.ApplicantDetailsPageTest" configurationId="tests" />
     </history-entry>
@@ -411,6 +533,37 @@
     </history-entry>
     <history-entry file="Unittests_for_applicationdetailspagetest_ApplicantDetailsPageTest - 2019.03.24 at 17h 04m 27s.xml">
       <configuration name="Unittests for applicationdetailspagetest.ApplicantDetailsPageTest" configurationId="tests" />
+=======
+    <history-entry file="Unittests_for_formpagetest_LoginTest - 2019.03.15 at 08h 36m 56s.xml">
+      <configuration name="Unittests for formpagetest.LoginTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_formpagetest_LoginTest - 2019.03.15 at 08h 38m 27s.xml">
+      <configuration name="Unittests for formpagetest.LoginTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_loginpagetest_LoginPageTest - 2019.03.19 at 08h 01m 55s.xml">
+      <configuration name="Unittests for loginpagetest.LoginPageTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_loginpagetest_LoginPageTest - 2019.03.19 at 08h 08m 29s.xml">
+      <configuration name="Unittests for loginpagetest.LoginPageTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_loginpagetest_LoginPageTest - 2019.03.19 at 08h 09m 13s.xml">
+      <configuration name="Unittests for loginpagetest.LoginPageTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_loginpagetest_LoginPageTest - 2019.03.19 at 08h 11m 17s.xml">
+      <configuration name="Unittests for loginpagetest.LoginPageTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_loginpagetest_LoginPageTest - 2019.03.19 at 08h 12m 24s.xml">
+      <configuration name="Unittests for loginpagetest.LoginPageTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_loginpagetest_LoginPageTest - 2019.03.19 at 08h 15m 16s.xml">
+      <configuration name="Unittests for loginpagetest.LoginPageTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_loginpagetest_LoginPageTest - 2019.03.19 at 08h 16m 25s.xml">
+      <configuration name="Unittests for loginpagetest.LoginPageTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_loginpagetest_LoginPageTest - 2019.03.19 at 08h 22m 19s.xml">
+      <configuration name="Unittests for loginpagetest.LoginPageTest" configurationId="tests" />
+>>>>>>> 8a5eba6deae094018f5aa2966bc845dd948fbea0
     </history-entry>
   </component>
   <component name="TodoView">
@@ -423,22 +576,39 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15955766" />
+=======
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25237092" />
+>>>>>>> 8a5eba6deae094018f5aa2966bc845dd948fbea0
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49960285" weight="0.43949044" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49960285" weight="0.39915073" />
+=======
+      <window_info anchor="bottom" id="Run" order="2" weight="0.43878657" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39869988" />
+>>>>>>> 8a5eba6deae094018f5aa2966bc845dd948fbea0
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32908705" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32908705" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32908705" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50039715" side_tool="true" weight="0.43949044" />
+=======
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32827735" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+>>>>>>> 8a5eba6deae094018f5aa2966bc845dd948fbea0
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32908705" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -480,6 +650,7 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/../SeleniumWD2Tutorial/switchto/switch_to_frame.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -535,33 +706,26 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="file://$PROJECT_DIR$/../SeleniumWD2Tutorial/wait_types/explicit_wait_demo2.py" />
+    <entry file="file://$PROJECT_DIR$/../SeleniumWD2Tutorial/utilities/element_present_check.py" />
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/case.py" />
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py" />
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/loader.py" />
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/loader.py" />
+    <entry file="file://$PROJECT_DIR$/../drills/drilling/count.py" />
+>>>>>>> 8a5eba6deae094018f5aa2966bc845dd948fbea0
     <entry file="file://$PROJECT_DIR$/states/WebDriver.py" />
     <entry file="file://$PROJECT_DIR$/states/Login.py" />
     <entry file="file://$PROJECT_DIR$/states/Utilities.py" />
     <entry file="file://$PROJECT_DIR$/base/base.py" />
     <entry file="file://$PROJECT_DIR$/pages/login_community/__init__.py" />
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/selenium/webdriver/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="311" selection-start-line="311" selection-end-line="311" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/selenium/webdriver/__init__.py" />
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/codecs.py" />
     <entry file="file://$PROJECT_DIR$/tests/onetime_setup.py" />
     <entry file="file://$PROJECT_DIR$/utilities/webdriverinstance.py" />
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/selenium/webdriver/chrome/remote_connection.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4260">
-          <caret line="299" column="8" selection-start-line="299" selection-start-column="8" selection-end-line="299" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/selenium/webdriver/chrome/remote_connection.py" />
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
@@ -576,6 +740,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -625,6 +790,15 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/main.py" />
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/genericpath.py" />
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/posixpath.py" />
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py" />
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/suite.py" />
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/runner.py" />
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py" />
+>>>>>>> 8a5eba6deae094018f5aa2966bc845dd948fbea0
     <entry file="file://$PROJECT_DIR$/tests/conftest.py" />
     <entry file="file://$PROJECT_DIR$/pages/loginpage.py" />
     <entry file="file://$PROJECT_DIR$/tests/logintest.py" />
@@ -632,6 +806,7 @@
     <entry file="file://$PROJECT_DIR$/base/seleniumdriver.py" />
     <entry file="file://$PROJECT_DIR$/tests/formpagetest.py" />
     <entry file="file://$PROJECT_DIR$/pages/formpage.py" />
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/pages/formpage/formmultipropertypage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1453" />
@@ -652,6 +827,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/formtest/formsinglepropertytest.py">
+=======
+    <entry file="file://$PROJECT_DIR$/pages/applicationpage/applicantdetailspage.py">
+>>>>>>> 8a5eba6deae094018f5aa2966bc845dd948fbea0
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
@@ -677,6 +855,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/pages/navigationpage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
@@ -687,6 +866,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 8a5eba6deae094018f5aa2966bc845dd948fbea0
     <entry file="file://$PROJECT_DIR$/pages/statespage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -734,31 +915,79 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/pages/applicationpage/applicantdetailspage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="358">
           <caret line="116" selection-start-line="116" selection-end-line="116" />
-          <folding>
-            <element signature="e#84#135#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+=======
+    <entry file="file://$PROJECT_DIR$/pages/loginpage/loginpage.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/applicationtest/applicationdetailspagetest.py">
+    <entry file="file://$PROJECT_DIR$/tests/logintest/loginapplicationpagetest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
+        <state relative-caret-position="510">
+          <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+>>>>>>> 8a5eba6deae094018f5aa2966bc845dd948fbea0
           <folding>
             <element signature="e#84#98#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/tests/applicationtest/applicationdetailspagetest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
+=======
+    <entry file="file://$PROJECT_DIR$/pages/loginpage/loginapplicationpage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+>>>>>>> 8a5eba6deae094018f5aa2966bc845dd948fbea0
+          <folding>
+            <element signature="e#84#135#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="135">
             <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+=======
+    <entry file="file://$PROJECT_DIR$/utilities/webdriver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/loginpage/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/logintest/loginpagetest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="136">
+            <caret line="8" column="81" selection-start-line="8" selection-start-column="81" selection-end-line="8" selection-end-column="81" />
+>>>>>>> 8a5eba6deae094018f5aa2966bc845dd948fbea0
           </first_editor>
           <second_editor />
         </state>
