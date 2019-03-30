@@ -4,7 +4,7 @@
 @date: 18-Feb-27
 """
 
-from utilities.seleniumdriver import SeleniumDriver
+from base.seleniumdriver import SeleniumDriver
 from selenium.webdriver.common.by import By
 
 
@@ -12,7 +12,7 @@ class ApplicantDetailsPage(SeleniumDriver):
 
     # Locators
     text_locators = {
-        "header": ["((//h2)[1]/following::div)[7]", "xpath"],
+        "header": ["((//h2)[1]/following::div)[7]", "xpath"]
     }
 
     input_locators = {
@@ -25,7 +25,7 @@ class ApplicantDetailsPage(SeleniumDriver):
         "zip_code": ["//label[contains(text(),'Zip')]/following::input[1]", "xpath"],
         "email": ["//label[contains(text(),'Email')]/following::input[1]", "xpath"],
         "cell": ["//label[contains(text(),'Cell')]/following::input[1]", "xpath"],
-        "birth": ["//label[contains(text(),'Birthdate')]/following::input[1]", "xpath"],
+        "birth_date": ["//label[contains(text(),'Birthdate')]/following::input[1]", "xpath"],
         "country": ["//label[contains(text(),'Country')]/following::input[1]", "xpath"],
         "state": ["//label[contains(text(),'State')]/following::input[1]", "xpath"],
         "gender": ["//label[contains(text(),'Gender')]/following::input[1]", "xpath"],
@@ -34,7 +34,7 @@ class ApplicantDetailsPage(SeleniumDriver):
         "travel_id_option": ["//label[contains(text(),'Travel Identification Options')]/following::input[1]",
                              "xpath"],
         "travel_id_number": ["//label[contains(text(),'Travel Identification Number')]/following::input[1]",
-                             "xpath"],
+                             "xpath"]
     }
 
     button_locators = {
@@ -70,11 +70,15 @@ class ApplicantDetailsPage(SeleniumDriver):
         self.send_keys(email, self.input_locators["email"])
 
     def enter_country(self, country):
+
+        # Refactor as base dropdown selection method
         self.click_element(self.input_locators["country"])
         country_element = self.driver.find_element(By.XPATH, f'//*[@title="{country}"]')
         country_element.click()
 
     def enter_state(self, state):
+
+        # Refactor as base dropdown selection method
         self.click_element(self.input_locators["state"])
         state_element = self.driver.find_element(By.XPATH, f'//*[@title="{state}"]')
         state_element.click()
@@ -83,11 +87,15 @@ class ApplicantDetailsPage(SeleniumDriver):
         self.send_keys(birth_date, self.input_locators["birth"])
 
     def enter_gender(self, gender):
+
+        # Refactor as base dropdown selection method
         self.click_element(self.input_locators["gender"])
         gender_element = self.driver.find_element(By.XPATH, f'//*[@title="{gender}"]')
         gender_element.click()
 
     def enter_id_option(self, id_option):
+
+        # Refactor as base dropdown selection method
         self.click_element(self.input_locators["id_option"])
         id_option_element = self.driver.find_element(By.XPATH, f'//*[@title="{id_option}"]')
         id_option_element.click()
@@ -96,6 +104,8 @@ class ApplicantDetailsPage(SeleniumDriver):
         self.send_keys(id_number, self.input_locators["id_number"])
 
     def enter_travel_id_option(self, travel_id_option):
+
+        # Refactor as base dropdown selection method
         self.click_element(self.input_locators["travel_id_option"])
         travel_id_option_element = self.driver.find_element(By.XPATH, f'(//*[@title="{travel_id_option}"])[2]')
         travel_id_option_element.click()
@@ -106,27 +116,25 @@ class ApplicantDetailsPage(SeleniumDriver):
     def click_save_continue_button(self):
         self.click_element(self.button_locators["save_continue_button"])
 
-    def submit_applicant_details(self, first_name, preferred_name, middle_name, last_name, street, city, country, state,
-                                 zip_code, cell, email, gender, birth_date, id_option, id_number,
-                                 travel_id_option, travel_id_number):
+    def submit_applicant_details(self, **kwargs):
 
-        header = self.wait_for_element(self.text_locators["header"]).text
+        # Refactor as verify page utility
+        element = self.wait_for_element(self.text_locators["header"])
+        header = element.text
         while header != "Applicant Details":
             self.click_element(self.button_locators["previous_button"])
             if header == "Applicant Details":
                 break
             else:
-                break
+                continue
 
+        # Refactor as verify input utility
         self.wait_for_element(self.input_locators["first_name"])
-
         for key, value in self.input_locators.items():
             element = self.get_element(value)
             user_input = element.get_attribute('value')
-            if user_input not in (first_name, preferred_name, middle_name, last_name, street, city, country, state,
-                                  zip_code, cell, email, gender, birth_date, id_option, id_number,
-                                  travel_id_option, travel_id_number):
-                self.enter_preferred_name(preferred_name)
+            if user_input not in kwargs[key]:
+                self.enter_(kwargs[key])
             else:
-                pass
+                continue
         self.click_save_continue_button()

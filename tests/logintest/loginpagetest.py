@@ -7,7 +7,7 @@
 import logging
 import unittest
 
-from utilities.webdriver import WebDriver
+from base.webdriver import WebDriver
 from pages.loginpage.loginpage import LoginPage
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',

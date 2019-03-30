@@ -4,7 +4,7 @@
 @date: 18-Feb-27
 """
 
-from utilities.seleniumdriver import SeleniumDriver
+from base.seleniumdriver import SeleniumDriver
 
 
 class FormMultiPropertyPage(SeleniumDriver):

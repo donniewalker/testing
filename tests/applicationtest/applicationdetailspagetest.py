@@ -7,7 +7,7 @@
 import logging
 import unittest
 
-from utilities.webdriver import WebDriver
+from base.webdriver import WebDriver
 from pages.applicationpage.applicantdetailspage import ApplicantDetailsPage
 from pages.loginpage.loginapplicationpage import LoginApplicationPage
 from pages.navigationpage import NavigationPage
@@ -25,8 +25,6 @@ class ApplicantDetailsPageTest(unittest.TestCase):
         cls.driver = cls.webdriver_instance.driver
         user = NavigationPage(cls.driver)
         user.navigate_to_online_application()
-        # new_applicant = LoginApplicationPage(cls.driver)
-        # new_applicant.community_apply("greg@mercer.com", "Greg", "Mercer")
         returning_applicant = LoginApplicationPage(cls.driver)
         returning_applicant.community_apply_returning("greg@mercer.com", "WelcomeToSFDC2018!")
 
@@ -34,7 +32,7 @@ class ApplicantDetailsPageTest(unittest.TestCase):
         logging.info("##### BEGIN ENTER AND SUBMIT APPLICANT DETAILS #####")
         prospect = ApplicantDetailsPage(self.driver)
         prospect.submit_applicant_details(first_name="Greg", preferred_name="GM", middle_name="Dean",
-                                          last_name="Mercer",street="5674 Century Blvd", city="Solange",
+                                          last_name="Mercer", street="5674 Century Blvd", city="Solange",
                                           country="United States", state="Alabama", zip_code="90789",
                                           cell="3104765488", email="dowalker@americancampus.com", gender="Male",
                                           birth_date="Mar 1, 2000", id_option="SSN", id_number="545347687",

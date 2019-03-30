@@ -7,7 +7,7 @@
 import logging
 import unittest
 
-from utilities.webdriver import WebDriver
+from base.webdriver import WebDriver
 from pages.formpage.formmultipropertypage import FormMultiPropertyPage
 from pages.navigationpage import NavigationPage
 
