@@ -10,7 +10,7 @@ import unittest
 from base.webdriver import WebDriver
 from pages.applicationpage.applicantdetailspage import ApplicantDetailsPage
 from pages.loginpage.loginapplicationpage import LoginApplicationPage
-from pages.navigationpage import NavigationPage
+from pages.navigationpage.navigationpage import NavigationPage
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',
                     level=logging.INFO)
@@ -28,7 +28,7 @@ class ApplicantDetailsPageTest(unittest.TestCase):
         returning_applicant = LoginApplicationPage(cls.driver)
         returning_applicant.community_apply_returning("greg@mercer.com", "WelcomeToSFDC2018!")
 
-    def test_one_enter_applicant_details(self):
+    def test_one_submit_successful(self):
         logging.info("##### BEGIN ENTER AND SUBMIT APPLICANT DETAILS #####")
         prospect = ApplicantDetailsPage(self.driver)
         prospect.submit_applicant_details(first_name="Greg", preferred_name="GM", middle_name="Dean",
