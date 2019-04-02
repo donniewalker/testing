@@ -2,7 +2,7 @@
 from base.seleniumdriver import SeleniumDriver
 
 
-class LoginApplicationPage(SeleniumDriver):
+class LoginCommunityPage(SeleniumDriver):
 
     # Locators
     locators = {
@@ -28,7 +28,7 @@ class LoginApplicationPage(SeleniumDriver):
     def click_continue_button(self):
         self.click_element(self.locators["continue_button"])
 
-    def login_to_application(self, email, first_name, last_name, password):
+    def login_to_community(self, email, first_name, last_name, password):
         self.wait_for_element(self.locators["email"])
         self.enter_email(email)
         self.click_continue_button()
@@ -42,11 +42,3 @@ class LoginApplicationPage(SeleniumDriver):
             self.wait_for_element(self.locators["password"])
             self.send_keys(password, self.locators["password"])
             self.click_continue_button()
-
-    def login_to_community(self, email, password):
-        self.wait_for_element(self.locators["email"])
-        self.enter_email(email)
-        self.enter_password(password)
-        self.click_continue_button()
-
-

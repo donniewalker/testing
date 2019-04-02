@@ -1,8 +1,3 @@
-"""
-@author: Donnie Walker
-@email: donalddeanwalker@gmail.com
-@date: 18-Feb-27
-"""
 
 import logging
 import unittest
@@ -22,22 +17,18 @@ class LoginPageTest(unittest.TestCase):
         cls.webdriver_instance.get_webdriver_instance()
         cls.driver = cls.webdriver_instance.driver
 
-    def test_one_login_valid(self):
+    def test_1_valid_login(self):
         logging.info("##### BEGIN VALID LOGIN TEST #####")
-        log_in = LoginPage(self.driver)
-        log_in.login_page("test-ctbawsg8setw@example.com", "y$9lB0|YDD")
-        result = log_in.is_valid()
+        user = LoginPage(self.driver)
+        result = user.valid_login("test-ctbawsg8setw@example.com", "y$9lB0|YDD")
         self.assertTrue(result)
-        print("Valid Login Test Passed")
 
-    def test_two_login_invalid(self):
+    def test_2_invalid_login(self):
         logging.info("##### BEGIN INVALID LOGIN TEST #####")
-        log_in = LoginPage(self.driver)
-        log_in.invalid_login_page("test-invalid@login.com", "login")
-        result = log_in.is_invalid()
+        user = LoginPage(self.driver)
+        result = user.invalid_login("test-invalid@login.com", "login")
         self.assertEqual(result, "Please check your username and password. "
-                         "If you still can't log in, contact your Salesforce administrator.")
-        print("Invalid Login Test Passed")
+                                 "If you still can't log in, contact your Salesforce administrator.")
 
     @classmethod
     def tearDownClass(cls):

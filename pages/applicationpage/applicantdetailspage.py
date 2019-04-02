@@ -1,8 +1,3 @@
-"""
-@author: Donnie Walker
-@email: donalddeanwalker@gmail.com
-@date: 18-Feb-27
-"""
 
 from base.seleniumdriver import SeleniumDriver
 from selenium.webdriver.common.by import By
@@ -125,16 +120,13 @@ class ApplicantDetailsPage(SeleniumDriver):
             self.click_element(self.button_locators["previous_button"])
             if header == "Applicant Details":
                 break
-            else:
-                continue
 
         # Refactor as verify input utility
         self.wait_for_element(self.input_locators["first_name"])
         for key, value in self.input_locators.items():
             element = self.get_element(value)
-            user_input = element.get_attribute('value')
-            if user_input not in kwargs[key]:
-                self.enter_(kwargs[key])
-            else:
-                continue
+            user_value = element.get_attribute('value')
+            if user_value not in kwargs[key]:
+                enter_correct_value = getattr(self, 'enter_%s' % key)
+                enter_correct_value(kwargs[key])
         self.click_save_continue_button()

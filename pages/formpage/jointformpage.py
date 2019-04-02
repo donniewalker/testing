@@ -1,13 +1,8 @@
-"""
-@author: Donnie Walker
-@email: donalddeanwalker@gmail.com
-@date: 18-Feb-27
-"""
 
 from base.seleniumdriver import SeleniumDriver
 
 
-class FormSinglePropertyPage(SeleniumDriver):
+class JointFormPage(SeleniumDriver):
 
     # Locators
     _first_name = "input-2"
@@ -55,45 +50,54 @@ class FormSinglePropertyPage(SeleniumDriver):
         self.send_keys(email, self._email, self._email_type)
 
     def select_country(self):
-        self.click_element(locator="input-24", locator_type="id")
-        self.click_element(locator="input-24-0-24", locator_type="id")
+        self.click_element(locator="input-25", locator_type="id")
+        self.click_element(locator="input-25-0-25", locator_type="id")
 
     def select_state(self):
-        self.click_element(locator="input-27", locator_type="id")
-        self.click_element(locator="input-27-4-27", locator_type="id")
+        self.click_element(locator="input-28", locator_type="id")
+        self.click_element(locator="input-28-4-28", locator_type="id")
 
     def select_gender(self):
-        self.click_element(locator="input-30", locator_type="id")
-        self.click_element(locator="input-30-1-30", locator_type="id")
+        self.click_element(locator="input-31", locator_type="id")
+        self.click_element(locator="input-31-1-31", locator_type="id")
 
     def select_year(self):
-        self.click_element(locator="input-33", locator_type="id")
-        self.click_element(locator="input-33-0-33", locator_type="id")
+        self.click_element(locator="input-34", locator_type="id")
+        self.click_element(locator="input-34-0-34", locator_type="id")
 
     def select_class(self):
-        self.click_element(locator="input-36", locator_type="id")
-        self.click_element(locator="input-36-0-36", locator_type="id")
+        self.click_element(locator="input-37", locator_type="id")
+        self.click_element(locator="input-37-0-37", locator_type="id")
 
     def select_description(self):
-        self.click_element(locator="input-39", locator_type="id")
-        self.click_element(locator="input-39-0-39", locator_type="id")
+        self.click_element(locator="input-40", locator_type="id")
+        self.click_element(locator="input-40-0-40", locator_type="id")
 
     def select_discovered(self):
-        self.click_element(locator="input-45", locator_type="id")
-        self.click_element(locator="input-45-4-45", locator_type="id")
+        self.click_element(locator="input-46", locator_type="id")
+        self.click_element(locator="input-46-4-46", locator_type="id")
+
+    def select_property_one(self):
+        self.click_element(locator="checkbox-0-22", locator_type="id")
+
+    def select_property_two(self):
+        self.click_element(locator="checkbox-1-22", locator_type="id")
+
+    def select_property_three(self):
+        self.click_element(locator="checkbox-2-22", locator_type="id")
 
     def click_housing(self):
         self.click_element(locator="//*[@id='radio-0-20']/following-sibling::label", locator_type="xpath")
 
     def click_text_opt_in(self):
-        self.click_element(locator="//*[@id='radio-0-23']/following-sibling::label", locator_type="xpath")
+        self.click_element(locator="//*[@id='radio-0-24']/following-sibling::label", locator_type="xpath")
         self.click_element(locator="//span[contains(text(),'I AGREE TO THE ABOVE TERMS.')]/preceding-sibling::span",
                            locator_type="xpath")
 
     def click_submit(self):
         self.click_element(locator="//button[contains(text(),'Submit')]", locator_type="xpath")
 
-    def submit_single_property_form(self, first_name, preferred_name, last_name, street, city, zip_code, cell, email):
+    def submit_multi_property_form(self, first_name, preferred_name, last_name, street, city, zip_code, cell, email):
         self.enter_first_name(first_name)
         self.enter_preferred_name(preferred_name)
         self.enter_last_name(last_name)
@@ -110,6 +114,9 @@ class FormSinglePropertyPage(SeleniumDriver):
         self.select_description()
         self.click_housing()
         self.select_discovered()
+        self.select_property_one()
+        self.select_property_two()
+        self.select_property_three()
         self.click_text_opt_in()
         self.click_submit()
 

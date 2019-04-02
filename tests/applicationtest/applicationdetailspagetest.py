@@ -1,8 +1,3 @@
-"""
-@author: Donnie Walker
-@email: donalddeanwalker@gmail.com
-@date: 18-Feb-27
-"""
 
 import logging
 import unittest

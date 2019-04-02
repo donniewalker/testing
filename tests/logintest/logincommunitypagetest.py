@@ -8,14 +8,14 @@ import logging
 import unittest
 
 from base.webdriver import WebDriver
-from pages.formpage.formmultipropertypage import FormMultiPropertyPage
-from pages.navigationpage import NavigationPage
+from pages.loginpage.logincommunitypage import LoginCommunityPage
+from pages.navigationpage.navigationpage import NavigationPage
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',
                     level=logging.INFO)
 
 
-class FormMultiPropertyPageTest(unittest.TestCase):
+class LoginApplicationPageTest(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
@@ -23,13 +23,13 @@ class FormMultiPropertyPageTest(unittest.TestCase):
         cls.webdriver_instance.get_webdriver_instance()
         cls.driver = cls.webdriver_instance.driver
         user = NavigationPage(cls.driver)
-        user.navigate_to_multi_property_form()
+        user.navigate_to_community()
 
-    def test_one_submit_multi_property_form(self):
-        logging.info("##### BEGIN SUBMIT MULTI-PROPERTY FORM #####")
-        prospect = FormMultiPropertyPage(self.driver)
-        prospect.submit_multi_property_form("Edgar", "Ed", "Santana", "1234 Yorktown St", "New Hampshire", "67567",
-                                            "3546789876", "edgars@santanas.com")
+    def test_one_new_applicant_login_valid(self):
+        logging.info("##### BEGIN VALID COMMUNITY LOGIN NEW APPLICANT TEST #####")
+        user = LoginCommunityPage(self.driver)
+        user.login_to_community(email="eva@fonda.com", first_name="eva", last_name="Fonda",
+                                password="WelcomeToSFDC2018!")
 
     @classmethod
     def tearDownClass(cls):

@@ -1,8 +1,3 @@
-"""
-@author: Donnie Walker
-@email: donalddeanwalker@gmail.com
-@date: 18-Feb-27
-"""
 
 import logging
 
@@ -10,7 +5,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import *
-from selenium.webdriver.common.keys import Keys
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',
                     level=logging.INFO)
@@ -63,6 +57,7 @@ class SeleniumDriver:
             logging.info("# Text found on element #")
         except:
             logging.info("# Text not found on element #")
+
         return element
 
     def click_element(self, locator, element=None):
@@ -80,17 +75,6 @@ class SeleniumDriver:
                 element = self.get_element(locator)
             element.click()
             element.clear()
-            logging.info("# Clearing field #")
-        except:
-            logging.info("# Element not found #")
-
-    def clear_field_alt(self, locator, element=None):
-        try:
-            if locator:
-                element = self.get_element(locator)
-            element.click()
-            element.send_keys(Keys.COMMAND, 'a')
-            element.send_keys(Keys.DELETE)
             logging.info("# Clearing field #")
         except:
             logging.info("# Element not found #")
@@ -135,3 +119,6 @@ class SeleniumDriver:
         except:
             logging.info("# Element not found #")
         return element
+
+    def wait_for_page_load(self):
+        WebDriverWait(self.driver, 10).until(lambda d: d.execute_script("return document.readyState") == "complete")
