@@ -1,5 +1,5 @@
 
-from base.seleniumdriver import SeleniumDriver
+from utilities.seleniumdriver import SeleniumDriver
 from selenium.webdriver.common.by import By
 
 
@@ -129,4 +129,5 @@ class ApplicantDetailsPage(SeleniumDriver):
             if user_value not in kwargs[key]:
                 enter_correct_value = getattr(self, 'enter_%s' % key)
                 enter_correct_value(kwargs[key])
+
         self.click_save_continue_button()

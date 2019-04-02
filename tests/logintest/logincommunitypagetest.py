@@ -7,7 +7,7 @@
 import logging
 import unittest
 
-from base.webdriver import WebDriver
+from utilities.webdriver import WebDriver
 from pages.loginpage.logincommunitypage import LoginCommunityPage
 from pages.navigationpage.navigationpage import NavigationPage
 

@@ -1,7 +1,7 @@
 
 import logging
 
-from base.seleniumdriver import SeleniumDriver
+from utilities.seleniumdriver import SeleniumDriver
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',
                     level=logging.INFO)

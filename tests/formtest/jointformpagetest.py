@@ -7,7 +7,7 @@
 import logging
 import unittest
 
-from base.webdriver import WebDriver
+from utilities.webdriver import WebDriver
 from pages.formpage.jointformpage import JointFormPage
 from pages.navigationpage.navigationpage import NavigationPage
 
@@ -22,11 +22,11 @@ class FormMultiPropertyPageTest(unittest.TestCase):
         cls.webdriver_instance = WebDriver()
         cls.webdriver_instance.get_webdriver_instance()
         cls.driver = cls.webdriver_instance.driver
-        user = NavigationPage(cls.driver)
-        user.navigate_to_joint_form()
+        cls.user = NavigationPage(cls.driver)
 
     def test_one_submit_multi_property_form(self):
         logging.info("##### BEGIN SUBMIT MULTI-PROPERTY FORM #####")
+        self.user.navigate_to_joint_form()
         prospect = JointFormPage(self.driver)
         prospect.submit_multi_property_form("Edgar", "Ed", "Santana", "1234 Yorktown St", "New Hampshire", "67567",
                                             "3546789876", "edgars@santanas.com")

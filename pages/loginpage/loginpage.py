@@ -1,5 +1,5 @@
 
-from base.seleniumdriver import SeleniumDriver
+from utilities.seleniumdriver import SeleniumDriver
 
 
 class LoginPage(SeleniumDriver):
