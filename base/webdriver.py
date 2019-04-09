@@ -17,7 +17,7 @@ class WebDriver:
         self.driver = webdriver.Chrome(chrome_driver, options=chrome_options)
         self.base_url = "https://test.salesforce.com"
 
-    def get_webdriver_instance(self):
+    def initiate_webdriver(self):
         logging.info("##### SETUP TEST #####")
         logging.info("# Initializing Webdriver #")
         self.driver.set_window_size(1366, 768, 0)

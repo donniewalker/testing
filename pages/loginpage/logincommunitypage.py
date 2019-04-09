@@ -1,5 +1,9 @@
 
-from utilities.seleniumdriver import SeleniumDriver
+import logging
+from base.seleniumdriver import SeleniumDriver
+
+logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',
+                    level=logging.INFO)
 
 
 class LoginCommunityPage(SeleniumDriver):
@@ -28,17 +32,20 @@ class LoginCommunityPage(SeleniumDriver):
     def click_continue_button(self):
         self.click_element(self.locators["continue_button"])
 
-    def login_to_community(self, email, first_name, last_name, password):
+    def login_community(self, **kwargs):
         self.wait_for_element(self.locators["email"])
-        self.enter_email(email)
+        self.enter_email(kwargs.get('email'))
         self.click_continue_button()
 
-        name_field_present = self.is_element_present(self.locators["first_name"])
-        if name_field_present is True:
-            self.enter_first_name(first_name)
-            self.enter_last_name(last_name)
-            self.click_continue_button()
-        else:
-            self.wait_for_element(self.locators["password"])
-            self.send_keys(password, self.locators["password"])
-            self.click_continue_button()
+        name_field_present = self.wait_for_element(self.locators["first_name"])
+        try:
+            if name_field_present:
+                self.enter_first_name(kwargs.get('first_name'))
+                self.enter_last_name(kwargs.get('last_name'))
+                self.click_continue_button()
+            else:
+                self.wait_for_element(self.locators["password"])
+                self.send_keys(kwargs.get('password'), self.locators["password"])
+                self.click_continue_button()
+        except:
+            logging.info("# Element Not Found #")

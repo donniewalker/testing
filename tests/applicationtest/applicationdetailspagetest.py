@@ -2,7 +2,7 @@
 import logging
 import unittest
 
-from utilities.webdriver import WebDriver
+from base.webdriver import WebDriver
 from pages.applicationpage.applicantdetailspage import ApplicantDetailsPage
 from pages.loginpage.loginapplicationpage import LoginApplicationPage
 from pages.navigationpage.navigationpage import NavigationPage
@@ -16,16 +16,16 @@ class ApplicantDetailsPageTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.webdriver_instance = WebDriver()
-        cls.webdriver_instance.get_webdriver_instance()
+        cls.webdriver_instance.initiate_webdriver()
         cls.driver = cls.webdriver_instance.driver
         cls.user = NavigationPage(cls.driver)
 
     def test_one_submit_successful(self):
         logging.info("##### BEGIN ENTER AND SUBMIT APPLICANT DETAILS #####")
-        self.user.navigate_to_application()
+        self.user.navigate_application()
         applicant = LoginApplicationPage(self.driver)
-        applicant.login_to_application(email="greg@mercer.com", password="WelcomeToSFDC2018!",
-                                       first_name="Greg", last_name="Mercer")
+        applicant.login_application(email="greg@mercer.com", password="WelcomeToSFDC2018!",
+                                    first_name="Greg", last_name="Mercer")
         prospect = ApplicantDetailsPage(self.driver)
         prospect.submit_applicant_details(first_name="Greg", preferred_name="GM", middle_name="Dean",
                                           last_name="Mercer", street="5674 Century Blvd", city="Solange",

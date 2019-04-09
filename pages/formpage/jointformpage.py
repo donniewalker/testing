@@ -1,125 +1,102 @@
 
-from utilities.seleniumdriver import SeleniumDriver
+from base.seleniumdriver import SeleniumDriver
 
 
 class JointFormPage(SeleniumDriver):
 
     # Locators
-    _first_name = "input-2"
-    _preferred_name = "input-3"
-    _last_name = "input-4"
-    _street = "input-6"
-    _city = "input-7"
-    _zip_code = "input-9"
-    _cell = "input-10"
-    _email = "input-11"
+    locators = {
+        "first_name": ["//label[contains(text(),'Legal First Name')]/following::input[1]", "xpath"],
+        "preferred_name": ["//label[contains(text(),'Preferred First Name')]/following::input[1]", "xpath"],
+        "last_name": ["//label[contains(text(),'Last Name')]/following::input[1]", "xpath"],
+        "street": ["(//label[contains(text(),'Street')]/following::textarea)[1]", "xpath"],
+        "city": ["//label[contains(text(),'City')]/following::input[1]", "xpath"],
+        "zip_code": ["//label[contains(text(),'Zip')]/following::input[1]", "xpath"],
+        "email": ["//label[contains(text(),'Email')]/following::input[1]", "xpath"],
+        "cell": ["//label[contains(text(),'Cell')]/following::input[1]", "xpath"],
+        "birth_date": ["//label[contains(text(),'Birthdate')]/following::input[1]", "xpath"],
+        "country": ["//label[contains(text(),'Country')]/following::input[1]", "xpath"],
+        "state": ["//label[contains(text(),'State')]/following::input[1]", "xpath"],
+        "gender": ["//label[contains(text(),'Gender')]/following::input[1]", "xpath"],
+        "class": ["//label[contains(text(),'Class')]/following::input[1]", "xpath"],
+        "description": ["//label[contains(text(),'Description')]/following::input[1]", "xpath"],
+        "discovered": ["//label[contains(text(),'Discovered')]/following::input[1]", "xpath"],
 
-    # Locator types
-    _first_name_type = "id"
-    _preferred_name_type = "id"
-    _last_name_type = "id"
-    _street_type = "id"
-    _city_type = "id"
-    _zip_code_type = "id"
-    _cell_type = "id"
-    _email_type = "id"
+    }
 
     def enter_first_name(self, first_name):
-        self.wait_for_element(self._first_name, self._first_name_type, pollFrequency=1)
-        self.send_keys(first_name, self._first_name, self._first_name_type)
+        self.send_keys(first_name, self.locators["first_name"])
 
     def enter_preferred_name(self, preferred_name):
-        self.send_keys(preferred_name, self._preferred_name, self._preferred_name_type)
+        self.send_keys(preferred_name, self.locators["preferred_name"])
 
     def enter_last_name(self, last_name):
-        self.send_keys(last_name, self._last_name, self._last_name_type)
+        self.send_keys(last_name, self.locators["last_name"])
 
     def enter_street(self, street):
-        self.send_keys(street, self._street, self._street_type)
+        self.send_keys(street, self.locators["street"])
 
     def enter_city(self, city):
-        self.send_keys(city, self._city, self._city_type)
+        self.send_keys(city, self.locators["city"])
 
     def enter_zip_code(self, zip_code):
-        self.send_keys(zip_code, self._zip_code, self._zip_code_type)
+        self.send_keys(zip_code, self.locators["zip"])
 
     def enter_cell(self, cell):
-        self.send_keys(cell, self._cell, self._cell_type)
+        self.send_keys(cell, self.locators["cell"])
 
     def enter_email(self, email):
-        self.send_keys(email, self._email, self._email_type)
+        self.send_keys(email, self.locators["email"])
 
-    def select_country(self):
-        self.click_element(locator="input-25", locator_type="id")
-        self.click_element(locator="input-25-0-25", locator_type="id")
+    def enter_country(self):
 
-    def select_state(self):
-        self.click_element(locator="input-28", locator_type="id")
-        self.click_element(locator="input-28-4-28", locator_type="id")
 
-    def select_gender(self):
-        self.click_element(locator="input-31", locator_type="id")
-        self.click_element(locator="input-31-1-31", locator_type="id")
 
-    def select_year(self):
-        self.click_element(locator="input-34", locator_type="id")
-        self.click_element(locator="input-34-0-34", locator_type="id")
+    def enter_state(self):
 
-    def select_class(self):
-        self.click_element(locator="input-37", locator_type="id")
-        self.click_element(locator="input-37-0-37", locator_type="id")
 
-    def select_description(self):
-        self.click_element(locator="input-40", locator_type="id")
-        self.click_element(locator="input-40-0-40", locator_type="id")
 
-    def select_discovered(self):
-        self.click_element(locator="input-46", locator_type="id")
-        self.click_element(locator="input-46-4-46", locator_type="id")
+    def enter_gender(self):
 
-    def select_property_one(self):
-        self.click_element(locator="checkbox-0-22", locator_type="id")
 
-    def select_property_two(self):
-        self.click_element(locator="checkbox-1-22", locator_type="id")
 
-    def select_property_three(self):
-        self.click_element(locator="checkbox-2-22", locator_type="id")
+    def enter_birth_date(self):
 
-    def click_housing(self):
-        self.click_element(locator="//*[@id='radio-0-20']/following-sibling::label", locator_type="xpath")
 
-    def click_text_opt_in(self):
-        self.click_element(locator="//*[@id='radio-0-24']/following-sibling::label", locator_type="xpath")
-        self.click_element(locator="//span[contains(text(),'I AGREE TO THE ABOVE TERMS.')]/preceding-sibling::span",
-                           locator_type="xpath")
+
+    def enter_class(self):
+
+
+
+    def enter_description(self):
+
+
+
+    def enter_discovered(self):
+
+
+
+    def enter_property_one(self):
+
+
+    def enter_property_two(self):
+
+
+    def enter_property_three(self):
+
+
+    def enter_housing(self):
+
+
+    def enter_text_opt_in(self):
+
 
     def click_submit(self):
-        self.click_element(locator="//button[contains(text(),'Submit')]", locator_type="xpath")
 
-    def submit_multi_property_form(self, first_name, preferred_name, last_name, street, city, zip_code, cell, email):
-        self.enter_first_name(first_name)
-        self.enter_preferred_name(preferred_name)
-        self.enter_last_name(last_name)
-        self.select_country()
-        self.enter_street(street)
-        self.enter_city(city)
-        self.select_state()
-        self.enter_zip_code(zip_code)
-        self.enter_cell(cell)
-        self.enter_email(email)
-        self.select_gender()
-        self.select_year()
-        self.select_class()
-        self.select_description()
-        self.click_housing()
-        self.select_discovered()
-        self.select_property_one()
-        self.select_property_two()
-        self.select_property_three()
-        self.click_text_opt_in()
-        self.click_submit()
 
-    def submit_form_partial(self):
+    def submit_form(self):
+
+
+    def submit_partial_form(self):
         pass
 

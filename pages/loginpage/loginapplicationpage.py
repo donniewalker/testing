@@ -1,8 +1,12 @@
 
-from utilities.seleniumdriver import SeleniumDriver
+import logging
+from base.verifypage import VerifyPage
+
+logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',
+                    level=logging.INFO)
 
 
-class LoginApplicationPage(SeleniumDriver):
+class LoginApplicationPage(VerifyPage):
 
     # Locators
     locators = {
@@ -28,25 +32,11 @@ class LoginApplicationPage(SeleniumDriver):
     def click_continue_button(self):
         self.click_element(self.locators["continue_button"])
 
-    def login_to_application(self, email, first_name, last_name, password):
+    def login_application(self, **kwargs):
         self.wait_for_element(self.locators["email"])
-        self.enter_email(email)
+        self.enter_email(kwargs.get('email'))
         self.click_continue_button()
+        self.verify_user()
 
-        name_field_present = self.is_element_present(self.locators["first_name"])
-        if name_field_present is True:
-            self.enter_first_name(first_name)
-            self.enter_last_name(last_name)
-            self.click_continue_button()
-        else:
-            self.wait_for_element(self.locators["password"])
-            self.send_keys(password, self.locators["password"])
-            self.click_continue_button()
-
-    def login_to_community(self, email, password):
-        self.wait_for_element(self.locators["email"])
-        self.enter_email(email)
-        self.enter_password(password)
-        self.click_continue_button()
 
 

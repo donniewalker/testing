@@ -2,7 +2,7 @@
 import logging
 import unittest
 
-from utilities.webdriver import WebDriver
+from base.webdriver import WebDriver
 from pages.loginpage.loginpage import LoginPage
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',
@@ -20,7 +20,7 @@ class LoginPageTest(unittest.TestCase):
     def test_1_valid_login(self):
         logging.info("##### BEGIN VALID LOGIN TEST #####")
         user = LoginPage(self.driver)
-        result = user.valid_login("test-ctbawsg8setw@example.com", "y$9lB0|YDD")
+        result = user.valid_login("test-txc52mkpywff@example.com", "p@ta0CB2)M")
         self.assertTrue(result)
 
     def test_2_invalid_login(self):

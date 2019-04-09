@@ -46,9 +46,6 @@ class SeleniumDriver:
 
         return element
 
-    def get_title(self):
-        return self.driver.title
-
     def get_text(self, locator, element=None):
         try:
             if locator:

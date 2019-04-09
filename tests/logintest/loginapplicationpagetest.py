@@ -1,13 +1,8 @@
-"""
-@author: Donnie Walker
-@email: donalddeanwalker@gmail.com
-@date: 18-Feb-27
-"""
 
 import logging
 import unittest
 
-from utilities.webdriver import WebDriver
+from base.webdriver import WebDriver
 from pages.loginpage.loginapplicationpage import LoginApplicationPage
 from pages.navigationpage.navigationpage import NavigationPage
 
@@ -19,17 +14,17 @@ class LoginApplicationPageTest(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.webdriver_instance = WebDriver()
-        cls.webdriver_instance.get_webdriver_instance()
-        cls.driver = cls.webdriver_instance.driver
+        cls.webdriver = WebDriver()
+        cls.webdriver.initiate_webdriver()
+        cls.driver = cls.webdriver.driver
         user = NavigationPage(cls.driver)
-        user.navigate_to_application()
+        user.navigate_application()
 
-    def test_one_new_applicant_login_valid(self):
+    def test_1_new_applicant_login_valid(self):
         logging.info("##### BEGIN VALID COMMUNITY LOGIN NEW APPLICANT TEST #####")
         user = LoginApplicationPage(self.driver)
-        user.login_to_application(email="eva@fonda.com", first_name="eva", last_name="Fonda",
-                                  password="WelcomeToSFDC2018!")
+        user.login_application(email="eva@fondaa.com", first_name="eva", last_name="Fonda",
+                               password="WelcomeToSFDC2018!")
 
     @classmethod
     def tearDownClass(cls):
