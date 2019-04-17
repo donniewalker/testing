@@ -1,8 +1,8 @@
 
-from base.seleniumdriver import SeleniumDriver
+from base.basepage import BasePage
 
 
-class JointFormPage(SeleniumDriver):
+class JointFormPage(BasePage):
 
     # Locators
     locators = {
@@ -48,55 +48,55 @@ class JointFormPage(SeleniumDriver):
     def enter_email(self, email):
         self.send_keys(email, self.locators["email"])
 
-    def enter_country(self):
-
-
-
-    def enter_state(self):
-
-
-
-    def enter_gender(self):
-
-
-
-    def enter_birth_date(self):
-
-
-
-    def enter_class(self):
-
-
-
-    def enter_description(self):
-
-
-
-    def enter_discovered(self):
-
-
-
-    def enter_property_one(self):
-
-
-    def enter_property_two(self):
-
-
-    def enter_property_three(self):
-
-
-    def enter_housing(self):
-
-
-    def enter_text_opt_in(self):
-
-
-    def click_submit(self):
-
-
-    def submit_form(self):
-
-
-    def submit_partial_form(self):
-        pass
+    # def enter_country(self):
+    #
+    #
+    #
+    # def enter_state(self):
+    #
+    #
+    #
+    # def enter_gender(self):
+    #
+    #
+    #
+    # def enter_birth_date(self):
+    #
+    #
+    #
+    # def enter_class(self):
+    #
+    #
+    #
+    # def enter_description(self):
+    #
+    #
+    #
+    # def enter_discovered(self):
+    #
+    #
+    #
+    # def enter_property_one(self):
+    #
+    #
+    # def enter_property_two(self):
+    #
+    #
+    # def enter_property_three(self):
+    #
+    #
+    # def enter_housing(self):
+    #
+    #
+    # def enter_text_opt_in(self):
+    #
+    #
+    # def click_submit(self):
+    #
+    #
+    # def submit_form(self):
+    #
+    #
+    # def submit_partial_form(self):
+    #     pass
 

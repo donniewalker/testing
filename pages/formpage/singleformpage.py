@@ -1,8 +1,8 @@
 
-from base.seleniumdriver import SeleniumDriver
+from base.basepage import BasePage
 
 
-class SingleFormPage(SeleniumDriver):
+class SingleFormPage(BasePage):
 
     # Locators
     _first_name = "input-2"

@@ -101,13 +101,13 @@ class SeleniumDriver:
             logging.info("# Element not found #")
             return False
 
-    def wait_for_element(self, locator, timeout=10, pollFrequency=0.5):
+    def wait_for_element(self, locator, timeout=10, poll_frequency=0.5):
         element = None
         try:
             by_type = self.get_by_type(locator[1])
             logging.info("# Waiting for element to become clickable #")
             wait = WebDriverWait(self.driver, timeout=timeout,
-                                 poll_frequency=pollFrequency,
+                                 poll_frequency=poll_frequency,
                                  ignored_exceptions=[NoSuchElementException,
                                                      ElementNotVisibleException,
                                                      ElementNotSelectableException])

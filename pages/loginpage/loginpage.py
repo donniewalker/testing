@@ -1,8 +1,8 @@
 
-from base.seleniumdriver import SeleniumDriver
+from base.basepage import BasePage
 
 
-class LoginPage(SeleniumDriver):
+class LoginPage(BasePage):
 
     locators = {
         "username": ["username", "id"],

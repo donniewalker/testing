@@ -1,12 +1,12 @@
 
 import logging
-from base.seleniumdriver import SeleniumDriver
+from base.basepage import BasePage
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',
                     level=logging.INFO)
 
 
-class LoginCommunityPage(SeleniumDriver):
+class LoginCommunityPage(BasePage):
 
     # Locators
     locators = {

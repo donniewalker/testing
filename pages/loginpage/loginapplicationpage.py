@@ -1,12 +1,12 @@
 
 import logging
-from base.verifypage import VerifyPage
+from base.basepage import BasePage
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',
                     level=logging.INFO)
 
 
-class LoginApplicationPage(VerifyPage):
+class LoginApplicationPage(BasePage):
 
     # Locators
     locators = {
@@ -36,7 +36,7 @@ class LoginApplicationPage(VerifyPage):
         self.wait_for_element(self.locators["email"])
         self.enter_email(kwargs.get('email'))
         self.click_continue_button()
-        self.verify_user()
+        self.verify_user(kwargs)
 
 
 
