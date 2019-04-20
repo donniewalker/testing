@@ -5,6 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import *
+from selenium.webdriver.support.ui import Select
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',
                     level=logging.INFO)
@@ -66,6 +67,19 @@ class SeleniumDriver:
         except:
             logging.info("# Element not found #")
 
+    def click_button(self, data, locator, element=None):
+        try:
+            if locator:
+                element = self.get_element(locator)
+            element.cl
+
+    # def click_drop_down_element(self, *args):
+    #     try:
+    #         element = self.driver.find_element(By.XPATH, f"(//*[@title='{args}'])[2]")
+    #         element.click()
+    #     except:
+    #         logging.info("# Element not found #")
+
     def clear_field(self, locator, element=None):
         try:
             if locator:
@@ -73,6 +87,45 @@ class SeleniumDriver:
             element.click()
             element.clear()
             logging.info("# Clearing field #")
+        except:
+            logging.info("# Element not found #")
+
+    def select_by_visible_text(self, data, locator):
+        try:
+            if locator:
+                # Locate the Sector and create a Select object
+                element = self.get_element(locator)
+                select_element = Select(element)
+                # this will print out strings available for selection on select_element, used in visible text below
+                print([o.text for o in select_element.options])
+                select_element.select_by_visible_text(data)
+                logging.info("# Clicking on element #")
+        except:
+            logging.info("# Element not found #")
+
+    def select_by_value(self, data, locator):
+        try:
+            if locator:
+                # Locate the Sector and create a Select object
+                element = self.get_element(locator)
+                select_element = Select(element)
+                # this will print out strings available for selection on select_element, used in visible text below
+                print([o.text for o in select_element.options])
+                select_element.select_by_value(data)
+                logging.info("# Clicking on element #")
+        except:
+            logging.info("# Element not found #")
+
+    def select_by_index(self, data, locator):
+        try:
+            if locator:
+                # Locate the Sector and create a Select object
+                element = self.get_element(locator)
+                select_element = Select(element)
+                # this will print out strings available for selection on select_element, used in visible text below
+                print([o.text for o in select_element.options])
+                select_element.select_by_index(data)
+                logging.info("# Clicking on element #")
         except:
             logging.info("# Element not found #")
 

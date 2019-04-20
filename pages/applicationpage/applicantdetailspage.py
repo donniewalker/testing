@@ -69,45 +69,30 @@ class ApplicantDetailsPage(BasePage):
         self.send_keys(email, self.locators["email"])
 
     def enter_country(self, country):
-
-        # Refactor as base dropdown selection method
         self.click_element(self.locators["country"])
-        country_element = self.driver.find_element(By.XPATH, f"//*[@title='{country}']")
-        country_element.click()
+        self.click_drop_down_element(country)
 
     def enter_state(self, state):
-
-        # Refactor as base dropdown selection method
         self.click_element(self.locators["state"])
-        state_element = self.driver.find_element(By.XPATH, f"//*[@title='{state}']")
-        state_element.click()
+        self.click_drop_down_element(state)
 
     def enter_birth_date(self, birth_date):
         self.send_keys(birth_date, self.locators["birth_date"])
 
     def enter_gender(self, gender):
-
-        # Refactor as base dropdown selection method
         self.click_element(self.locators["gender"])
-        gender_element = self.driver.find_element(By.XPATH, f"//*[@title='{gender}']")
-        gender_element.click()
+        self.click_drop_down_element(gender)
 
     def enter_id_option(self, id_option):
-
-        # Refactor as base dropdown selection method
         self.click_element(self.locators["id_option"])
-        id_option_element = self.driver.find_element(By.XPATH, f"//*[@title='{id_option}']")
-        id_option_element.click()
+        self.click_drop_down_element(id_option)
 
     def enter_id_number(self, id_number):
         self.send_keys(id_number, self.locators["id_number"])
 
     def enter_travel_id_option(self, travel_id_option):
-
-        # Refactor as base dropdown selection method
         self.click_element(self.locators["travel_id_option"])
-        travel_id_option_element = self.driver.find_element(By.XPATH, f"(//*[@title='{travel_id_option}'])[2]")
-        travel_id_option_element.click()
+        self.click_drop_down_element(travel_id_option)
 
     def enter_travel_id_number(self, travel_id_number):
         self.send_keys(travel_id_number, self.locators["travel_id_number"])
