@@ -1,6 +1,5 @@
 
 from base.basepage import BasePage
-from selenium.webdriver.common.by import By
 
 
 class ApplicantDetailsPage(BasePage):
@@ -104,5 +103,5 @@ class ApplicantDetailsPage(BasePage):
         self.click_element(self.button_locators["save_continue_button"])
 
     def submit_applicant_details(self, **kwargs):
-        self.verify_header(self.header)
+        self.verify_application_header(self.header)
         self.verify_input(kwargs)

@@ -1,4 +1,3 @@
-
 import logging
 from base.seleniumdriver import SeleniumDriver
 
@@ -12,6 +11,7 @@ class BasePage(SeleniumDriver):
         return self.driver.title
 
     def verify_user(self, kwargs):
+        # Application login page only
         name_field_present = self.wait_for_element(getattr(self, 'locators')['first_name'], timeout=1)
         try:
             if name_field_present:
@@ -24,7 +24,7 @@ class BasePage(SeleniumDriver):
         except:
             logging.info("# Element Not Found #")
 
-    def verify_header(self, *args):
+    def verify_application_header(self, *args):
         element = self.wait_for_element(getattr(self, 'text_locators')["header"])
         header_present = element.text
         while header_present != args:

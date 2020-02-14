@@ -20,7 +20,7 @@ class LoginPageTest(unittest.TestCase):
     def test_1_valid_login(self):
         logging.info("##### BEGIN VALID LOGIN TEST #####")
         user = LoginPage(self.driver)
-        result = user.valid_login("test-txc52mkpywff@example.com", "p@ta0CB2)M")
+        result = user.valid_login("dowalker@americancampus.com.disney", "Dean_disney1!")
         self.assertTrue(result)
 
     def test_2_invalid_login(self):

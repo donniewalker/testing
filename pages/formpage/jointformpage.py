@@ -1,5 +1,6 @@
 
 from base.basepage import BasePage
+import time
 
 
 class JointFormPage(BasePage):
@@ -25,6 +26,7 @@ class JointFormPage(BasePage):
                     "/following::input[@value='YES']", "xpath"],
         "hear_about_us": ["//label[contains(text(),'How did you hear about us?')]/following::input[1]", "xpath"],
         "text_opt_in": ["//span[contains(text(),'I AGREE TO THE ABOVE TERMS.')]/preceding::span[1]", "xpath"],
+        "text_opt_in_disclaimer": ["//span[contains(text(),'I AGREE TO THE ABOVE TERMS.')]/preceding::input[1]", "xpath"],
         "submit": ["//button[contains(text(),'Submit')]", "xpath"]
     }
 
@@ -44,7 +46,13 @@ class JointFormPage(BasePage):
         self.send_keys(city, self.locators["city"])
 
     def enter_zip_code(self, zip_code):
-        self.send_keys(zip_code, self.locators["zip"])
+        self.send_keys(zip_code, self.locators["zip_code"])
+
+    def enter_country(self, country):
+        self.select_by_title(country, self.locators["country"])
+
+    def enter_state(self, state):
+        self.select_by_title(state, self.locators["state"])
 
     def enter_cell(self, cell):
         self.send_keys(cell, self.locators["cell"])
@@ -52,29 +60,23 @@ class JointFormPage(BasePage):
     def enter_email(self, email):
         self.send_keys(email, self.locators["email"])
 
-    def enter_country(self, country):
-        self.select_by_visible_text(country, self.locators["country"])
-
-    def enter_state(self, state):
-        self.select_by_visible_text(state, self.locators["state"])
-
     def enter_gender(self, gender):
-        self.select_by_visible_text(gender, self.locators["gender"])
+        self.select_by_title(gender, self.locators["gender"])
 
     def enter_birth_date(self, birth_date):
-        self.select_by_visible_text(birth_date, self.locators["birth_date"])
+        self.select_by_title(birth_date, self.locators["birth_date"])
 
     def enter_in_the_fall_of(self, in_the_fall_of):
-        self.select_by_visible_text(in_the_fall_of, self.locators["in_the_fall_of"])
+        self.select_by_title(in_the_fall_of, self.locators["in_the_fall_of"])
 
     def enter_i_will_be_a(self, i_will_be_a):
-        self.select_by_visible_text(i_will_be_a, self.locators["i_will_be_a"])
+        self.select_by_title(i_will_be_a, self.locators["i_will_be_a"])
 
     def enter_describes_you(self, describes_you):
-        self.select_by_visible_text(describes_you, self.locators["describes_you"])
+        self.select_by_title(describes_you, self.locators["describes_you"])
 
     def enter_hear_about_us(self, hear_about_us):
-        self.select_by_visible_text(hear_about_us, self.locators["hear_about_us"])
+        self.select_by_title(hear_about_us, self.locators["hear_about_us"])
 
     def enter_property(self):
         checkboxes = self.driver.find_element_by_xpath("//span[@class='slds-checkbox_faux']")
@@ -92,22 +94,23 @@ class JointFormPage(BasePage):
         self.click_element(self.locators["submit"])
 
     def submit_form(self, **kwargs):
-        self.enter_first_name(kwargs)
-        self.enter_preferred_name(kwargs)
-        self.enter_last_name(kwargs)
-        self.enter_street(kwargs)
-        self.enter_city(kwargs)
-        self.enter_zip_code(kwargs)
-        self.enter_email(kwargs)
-        self.enter_cell(kwargs)
-        self.enter_birth_date(kwargs)
-        self.enter_country(kwargs)
-        self.enter_state(kwargs)
-        self.enter_gender(kwargs)
-        self.enter_in_the_fall_of(kwargs)
-        self.enter_i_will_be_a(kwargs)
-        self.enter_describes_you(kwargs)
-        self.enter_housing(kwargs)
-        self.enter_hear_about_us(kwargs)
-        self.enter_text_opt_in(kwargs)
+        time.sleep(5)
+        self.enter_first_name(kwargs.get("first_name"))
+        self.enter_preferred_name(kwargs.get("preferred_name"))
+        self.enter_last_name(kwargs.get("last_name"))
+        self.enter_street(kwargs.get("street"))
+        self.enter_city(kwargs.get("city"))
+        self.enter_zip_code(kwargs.get("zip_code"))
+        self.enter_country(kwargs.get("country"))
+        self.enter_state(kwargs.get("state"))
+        self.enter_email(kwargs.get("email"))
+        self.enter_cell(kwargs.get("cell"))
+        self.enter_birth_date(kwargs.get("birth_date"))
+        self.enter_gender(kwargs.get("gender"))
+        self.enter_in_the_fall_of(kwargs.get("in_the_fall_of"))
+        self.enter_i_will_be_a(kwargs.get("i_will_be_a"))
+        self.enter_describes_you(kwargs.get("describes_you"))
+        self.enter_housing(kwargs.get("housing"))
+        self.enter_hear_about_us(kwargs.get("hear_about_us"))
+        self.enter_text_opt_in()
         self.click_submit()
